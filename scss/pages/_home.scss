@@ -1,0 +1,493 @@
+.hero {
+  height: 60rem;
+  min-height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 9rem;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease 0.2s;
+
+  &.revealed {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &__container {
+    width: 70%;
+
+    @include respond-to(lg) {
+      width: 80%;
+    }
+
+    @include respond-to(md) {
+      width: 90%;
+    }
+
+    @include respond-to(sm) {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    font-size: 4.2rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: $color-light; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      $color-light,
+      rgb(29, 59, 123),
+      $color-light
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      $color-light,
+      rgb(29, 59, 123),
+      $color-light
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: gradient 3s linear infinite;
+
+    @include respond-to(sm) {
+      font-size: 4rem;
+    }
+  }
+
+  p {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: $color-light-secondary;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    margin: 3.8rem auto 0 auto;
+    column-gap: 1.6rem;
+    border: 1px solid $color-light;
+    color: $color-light;
+    border-radius: 50px;
+    padding: 0.8rem 2.8rem;
+    width: max-content;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    transition: all 0.4s ease;
+  }
+
+  a svg {
+    width: 1.7rem;
+  }
+
+  a svg path {
+    fill: $color-light;
+    transition: all 0.4s ease;
+  }
+
+  a:hover {
+    color: $color-dark-blue;
+    border-color: $color-light;
+    background-color: $color-light;
+  }
+
+  a:hover {
+    svg path {
+      fill: $color-dark-blue;
+    }
+  }
+}
+
+.featured-projects {
+  padding-top: 5rem;
+
+  &-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6rem;
+    column-gap: 4rem;
+
+    @include respond-to(sm) {
+      column-gap: 2rem;
+    }
+  }
+
+  &-title span {
+    width: 100%;
+    height: 1px;
+    background-color: $color-light-border;
+    flex-shrink: 1;
+  }
+
+  h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    position: relative;
+    flex-shrink: 0;
+    flex-grow: 1;
+  }
+
+  &__card-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem 5rem;
+
+    @include respond-to(lg) {
+      grid-template-columns: 0.9fr;
+    }
+
+    @include respond-to(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    border-radius: 20px;
+    position: relative;
+    height: 30rem;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 14px 28px rgba(1, 5, 14, 0.229),
+      0 10px 10px rgba(1, 5, 14, 0.229);
+
+    @include respond-to(sm) {
+      height: 24rem;
+    }
+  }
+
+  &__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+    pointer-events: none;
+  }
+
+  &__card:hover img {
+    transform: scale(1.03);
+  }
+
+  &__card > div {
+    background-color: rgba(1, 14, 42, 0.55);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 20px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    pointer-events: none;
+  }
+
+  &__card:hover > div {
+    opacity: 1;
+  }
+
+  &__card-info {
+    padding: 3rem;
+    color: $color-light;
+  }
+
+  &__card-info span.top-text {
+    text-align: center;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    opacity: 0.9;
+    transform: translateY(-3rem);
+    transition: all 0.4s ease;
+  }
+
+  &__card:hover &__card-info span.top-text {
+    transform: translateY(0);
+  }
+
+  &__card-info span::first-letter {
+    text-transform: uppercase;
+  }
+
+  &__card-info > div {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    transform: translateY(2.5rem);
+    transition: all 0.4s ease;
+    opacity: 0;
+  }
+
+  &__card:hover &__card-info > div {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &__card-info h3 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  &__card-info span.label {
+    display: block;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: $color-light-secondary;
+    text-align: left;
+    margin-bottom: 2.4rem;
+  }
+
+  &__card-info ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+  }
+
+  &__card-info ul li {
+    font-size: 1.2rem;
+    background-color: $color-light;
+    color: $color-dark-blue;
+    padding: 0.2rem 1.8rem;
+    border-radius: 20px;
+    font-weight: 700;
+    width: max-content;
+  }
+
+  &__card-info ul li:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.444);
+  }
+
+  &__overlay.hidden {
+    display: none;
+  }
+
+  &__sidebar {
+    position: fixed;
+    overflow-y: scroll;
+    z-index: 6;
+    width: 32%;
+    height: 100vh;
+    right: -70%;
+    top: 0;
+    bottom: 0;
+    background-color: $color-dark-blue;
+    padding: 3rem;
+    transition: right 0.4s ease;
+
+    @include respond-to(lg) {
+      width: 36%;
+    }
+
+    @include respond-to(md) {
+      width: 45%;
+    }
+
+    @include respond-to(sm) {
+      width: 50%;
+    }
+  }
+
+  &__sidebar.active {
+    right: 0;
+  }
+
+  &__sidebar-btn {
+    padding-bottom: 2.2rem;
+    border-bottom: 1px solid $color-light-border;
+  }
+
+  &__sidebar-btn .back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__sidebar-btn .back-btn img {
+    width: 2.2rem;
+    pointer-events: none;
+  }
+
+  &__sidebar-btn .back-btn span {
+    font-weight: 400;
+    font-size: 2rem;
+    color: $color-light;
+    text-transform: capitalize;
+    pointer-events: none;
+  }
+
+  &__sidebar-title {
+    margin-top: 2rem;
+  }
+
+  &__sidebar-title h3 {
+    color: $color-light;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  &__sidebar-title span {
+    display: block;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: $color-light-secondary;
+    text-align: left;
+  }
+
+  &__sidebar-image {
+    margin-top: 2rem;
+    width: 100%;
+    height: 20rem;
+    border-radius: 20px;
+
+    @include respond-to(sm) {
+      height: 15rem;
+    }
+  }
+
+  &__sidebar-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  &__sidebar-about,
+  &__sidebar-tech {
+    margin-top: 2rem;
+  }
+
+  &__sidebar-about h4,
+  &__sidebar-tech h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  &__sidebar-tech h4 {
+    margin-bottom: 1.2rem;
+  }
+
+  &__sidebar-about p {
+    color: $color-light-secondary;
+    font-size: 1.8rem;
+  }
+
+  &__sidebar-tech ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 1.8rem;
+  }
+
+  &__sidebar-tech ul li:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  &__sidebar-tech ul li {
+    font-size: 1.2rem;
+    background-color: $color-light;
+    color: $color-dark-blue;
+    padding: 0.2rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 700;
+    width: max-content;
+  }
+
+  &__sidebar-links {
+    margin-top: 2rem;
+    margin-bottom: 7rem;
+    display: flex;
+    align-items: center;
+    row-gap: 1.8rem;
+
+    @include respond-to(md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__sidebar-links a {
+    display: flex;
+    align-items: center;
+    column-gap: 1.2rem;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 0.4rem;
+  }
+
+  &__sidebar-links a:first-child {
+    margin-right: 3rem;
+  }
+
+  &__sidebar-links a span {
+    color: $color-light;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  &__sidebar-links a img {
+    width: 2rem;
+  }
+
+  &__sidebar-links a::after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 1px;
+    background-color: $color-light;
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s ease;
+  }
+
+  &__sidebar-links a:hover::after {
+    width: 100%;
+  }
+}
+
+// ANIMATION
+@keyframes gradient {
+  to {
+    background-position: 200% center;
+  }
+}

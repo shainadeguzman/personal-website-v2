@@ -1,0 +1,52 @@
+.footer {
+  margin-top: 25rem;
+  height: 9rem;
+  background-color: rgb(4, 12, 30);
+  letter-spacing: 1px;
+
+  @include respond-to(sm) {
+    height: unset;
+  }
+
+  &-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 3.5rem;
+
+    @include respond-to(sm) {
+      flex-direction: column-reverse;
+      padding: 4rem 0;
+    }
+  }
+
+  p {
+    color: $color-light;
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+  }
+
+  ul a {
+    text-decoration: none;
+  }
+
+  ul a img {
+    width: 2.8rem;
+  }
+
+  ul li:not(:last-child) {
+    margin-right: 4rem;
+
+    @include respond-to(sm) {
+      margin-right: 5rem;
+    }
+  }
+}

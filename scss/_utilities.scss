@@ -1,0 +1,29 @@
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 0 7rem;
+
+  @include respond-to(xl) {
+    padding: 0 6rem;
+  }
+
+  @include respond-to(lg) {
+    padding: 0 4rem;
+  }
+
+  @include respond-to(md) {
+    padding: 0 3rem;
+  }
+}
+
+.section-padding {
+  padding-top: 15rem;
+}
+
+ul li.uppercase {
+  text-transform: uppercase;
+}
+
+ul li.capitalize {
+  text-transform: capitalize;
+}

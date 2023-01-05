@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; // 10px(1rem)
+  scroll-behavior: smooth;
+
+  @include respond-to(lg) {
+    font-size: 59.375%; // 9.5px
+  }
+
+  @include respond-to(md) {
+    font-size: 56.25%; // 9px
+  }
+
+  @include respond-to(sm) {
+    font-size: 53.125%; // 8.5px
+  }
+}
+
+body {
+  background: url("..//img/bg-stars.svg"), $color-dark-blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Manrope", sans-serif;
+  box-sizing: border-box;
+  line-height: 1.7;
+  counter-reset: item;
+
+  &.overflow-hidden {
+    overflow-y: hidden;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-light;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}

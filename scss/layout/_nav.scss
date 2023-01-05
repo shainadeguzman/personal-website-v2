@@ -1,0 +1,226 @@
+.nav {
+  border-bottom: 1px solid $color-light-border;
+  height: 9rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top 0.4s ease;
+  z-index: 5;
+
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 3.2rem;
+    color: $color-light;
+  }
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    @include respond-to(lg) {
+      display: none;
+    }
+  }
+
+  &__list li:not(:last-child) {
+    margin-right: 7rem;
+  }
+
+  &__list a {
+    text-decoration: none;
+    color: $color-light-secondary;
+    text-transform: uppercase;
+    transition: color 0.4s ease;
+    font-weight: 700;
+    font-size: 1.8rem;
+    position: relative;
+  }
+
+  &__list a::before {
+    margin-right: 0.4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    counter-increment: item;
+    content: "0" counter(item) ". ";
+  }
+
+  &__list a.active {
+    color: $color-light;
+    font-weight: 700;
+    position: relative;
+  }
+
+  &__list a.active::after {
+    position: absolute;
+    content: "";
+    width: 112%;
+    height: 1px;
+    background-color: $color-light;
+    bottom: -5px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__list a:hover {
+    color: $color-light;
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 4.5rem;
+    height: 4rem;
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, border 0.4s ease 0.1s;
+
+    @include respond-to(lg) {
+      display: flex;
+    }
+  }
+
+  &__btn span {
+    width: 94%;
+    height: 2px;
+    background-color: $color-light;
+    position: absolute;
+    border-radius: 2px;
+  }
+
+  &__btn span:first-child {
+    transform: translateY(-10px);
+  }
+
+  &__btn span:nth-child(2) {
+    width: 88%;
+  }
+
+  &__btn span:last-child {
+    transform: translateY(10px);
+  }
+
+  &__btn.active {
+    width: 4.5rem;
+    height: 4.5rem;
+    transform: rotate(90deg);
+    border: 1px solid $color-light-border;
+    border-radius: 50px;
+  }
+
+  &__btn.active span:nth-child(2) {
+    display: none;
+  }
+
+  &__btn.active span:first-child,
+  &__btn.active span:last-child {
+    transform: translateY(0);
+    width: 55%;
+  }
+
+  &__btn.active span:first-child {
+    transform: rotate(45deg);
+  }
+
+  &__btn.active span:last-child {
+    transform: rotate(-45deg);
+  }
+
+  &__mobile {
+    position: fixed;
+    height: 100vh;
+    width: 40vw;
+    top: 0;
+    right: -40vw;
+    background-color: rgba(1, 8, 25, 0.977);
+    transition: right 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include respond-to(md) {
+      width: 60vw;
+      right: -60vw;
+    }
+
+    @include respond-to(sm) {
+      width: 75vw;
+      right: -75vw;
+    }
+  }
+
+  &__mobile.active {
+    right: 0;
+  }
+
+  &__mobile ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+  }
+
+  &__mobile ul li:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+
+  &__mobile ul a {
+    text-decoration: none;
+    color: $color-light-secondary;
+    text-transform: uppercase;
+    transition: color 0.4s ease;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  &__mobile a.active {
+    color: $color-light;
+    font-weight: 700;
+    position: relative;
+  }
+
+  &__mobile a.active::after {
+    position: absolute;
+    content: "";
+    width: 112%;
+    height: 1px;
+    background-color: $color-light;
+    bottom: -4px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__mobile a:hover {
+    color: $color-light;
+  }
+
+  &__mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.444);
+  }
+
+  &__mobile-overlay.hidden {
+    display: none;
+  }
+}

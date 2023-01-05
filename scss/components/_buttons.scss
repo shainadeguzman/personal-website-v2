@@ -1,0 +1,29 @@
+// PRIMARY BUTTON
+
+// FORM BUTTON
+
+// SCROLL TO TOP BUTTON
+.scroll-top-btn {
+  background-color: $color-light;
+  border: none;
+  position: fixed;
+  cursor: pointer;
+  right: -6rem;
+  bottom: 6rem;
+  width: 4.2rem;
+  height: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transition: right 0.4s ease;
+
+  img {
+    width: 50%;
+    height: 50%;
+  }
+
+  &.reveal {
+    right: 3rem;
+  }
+}
