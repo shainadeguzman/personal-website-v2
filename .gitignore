@@ -1,2 +1,5 @@
 # ignore ALL .txt files
 *.txt
+
+# ignore ALL files in folder named design
+design/
