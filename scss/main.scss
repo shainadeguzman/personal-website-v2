@@ -3,13 +3,14 @@
 @import "reset";
 @import "utilities";
 
-// pages
-@import "pages/home";
-@import "pages/about";
-
 // layout
 @import "layout/nav";
 @import "layout/footer";
 
 // components
 @import "components/buttons";
+
+// pages
+@import "pages/home";
+@import "pages/about";
+@import "pages/projects";

@@ -1,9 +1,7 @@
-const projectsCard = document.querySelectorAll(".featured-projects__card");
-const projectsOverlay = document.querySelector(".featured-projects__overlay");
-const projectBackBtn = document.querySelectorAll(
-  ".featured-projects__sidebar-btn"
-);
-const projectSidebar = document.querySelectorAll(".featured-projects__sidebar");
+const projectsCard = document.querySelectorAll(".projects__card");
+const projectsOverlay = document.querySelector(".projects__overlay");
+const projectBackBtn = document.querySelectorAll(".projects__sidebar-btn");
+const projectSidebar = document.querySelectorAll(".projects__sidebar");
 
 const bodyOverFlow = function (param) {
   document.body.style.overflowY = `${param}`;
@@ -14,7 +12,7 @@ projectsCard.forEach((card) =>
     const targetEl = e.target.dataset.num;
     console.log(targetEl);
     document
-      .querySelector(`.featured-projects__sidebar-${targetEl}`)
+      .querySelector(`.projects__sidebar-${targetEl}`)
       .classList.add("active");
     projectsOverlay.classList.remove("hidden");
     bodyOverFlow("hidden");

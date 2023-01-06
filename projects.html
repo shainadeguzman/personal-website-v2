@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      href="img//favicon-16x16.png"
+      type="image/x-icon"
+    />
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Shaina De Guzman &VerticalLine; Front-end Web Developer</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+    </style>
+  </head>
+  <body id="body">
+    <header>
+      <!----------------------------- NAV ----------------------------->
+      <nav class="nav">
+        <div class="nav__container container">
+          <a href="home.html" class="nav__logo">Shaina.</a>
+          <ul class="nav__list">
+            <li><a href="home.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="projects.html" class="active">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+
+          <!-- MOBILE NAV OVERLAY -->
+          <div class="nav__mobile-overlay hidden"></div>
+
+          <!-- MOBILE NAV -->
+          <nav class="nav__mobile">
+            <ul>
+              <li class="nav__mobile-items">
+                <a href="home.html">home</a>
+              </li>
+              <li class="nav__mobile-items">
+                <a href="about.html">about</a>
+              </li>
+              <li class="nav__mobile-items">
+                <a href="projects.html" class="active">projects</a>
+              </li>
+              <li class="nav__mobile-items">
+                <a href="contact.html">contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- MOBILE NAV BUTTON -->
+          <button class="nav__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!----------------------------- PROJECTS ----------------------------->
+      <section class="projects">
+        <div class="container">
+          <div class="section-title">
+            <h1>projects.</h1>
+            <p>
+              This is a paragraph. Choosing a font combination for your website
+              is really important.
+            </p>
+          </div>
+          <nav class="projects__nav">
+            <button class="filter-btn all-projects active">all</button>
+            <button class="filter-btn side-projects">side projects</button>
+            <button class="filter-btn practice-projects">
+              practice projects
+            </button>
+          </nav>
+          <div class="projects__container">
+            <div
+              class="projects__card side-projects active"
+              role="gridcell"
+              tabindex="0"
+              data-num="1"
+            >
+              <img src="img/proj-1.jpg" alt="project image" />
+              <div class="projects__card-info">
+                <span class="top-text">click to view project info</span>
+                <div>
+                  <h3>Lorem, ipsum dolor.</h3>
+                  <span class="label">side project</span>
+                  <ul>
+                    <li class="uppercase">html</li>
+                    <li class="uppercase">css</li>
+                    <li class="capitalize">javascript</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <aside class="projects__sidebar projects__sidebar-1">
+              <div class="projects__sidebar-btn">
+                <button class="back-btn">
+                  <img src="img/left-arrow-icon.svg" alt="left arrow icon" />
+                  <span>back</span>
+                </button>
+              </div>
+              <br />
+              <div class="projects__sidebar-title">
+                <h3>1 Lorem, ipsum dolor.</h3>
+                <span>side project</span>
+              </div>
+              <div class="projects__sidebar-image">
+                <img src="img/proj-1.jpg" alt="project image" />
+              </div>
+              <br />
+              <div class="projects__sidebar-about">
+                <h4>about</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+                  quod hic at eos! Nam, labore.
+                </p>
+              </div>
+              <br />
+              <div class="projects__sidebar-tech">
+                <h4>technologies</h4>
+                <ul>
+                  <li class="uppercase">html</li>
+                  <li class="uppercase">css</li>
+                  <li class="capitalize">javascript</li>
+                </ul>
+              </div>
+              <br />
+              <div class="projects__sidebar-links">
+                <a href="#">
+                  <span>visit website</span>
+                  <img src="img/earth-icon.svg" alt="earth icon" />
+                </a>
+                <a href="#">
+                  <span>source code</span>
+                  <img src="img/github-icon.svg" alt="github icon" />
+                </a>
+              </div>
+              <br />
+            </aside>
+
+            <div
+              class="projects__card side-projects active"
+              role="gridcell"
+              tabindex="0"
+              data-num="2"
+            >
+              <img src="img/proj-1.jpg" alt="project image" />
+              <div class="projects__card-info">
+                <span class="top-text">click to view project info</span>
+                <div>
+                  <h3>Lorem, ipsum dolor.</h3>
+                  <span class="label">side project</span>
+                  <ul>
+                    <li class="uppercase">html</li>
+                    <li class="uppercase">css</li>
+                    <li class="capitalize">javascript</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <aside class="projects__sidebar projects__sidebar-2">
+              <div class="projects__sidebar-btn">
+                <button class="back-btn">
+                  <img src="img/left-arrow-icon.svg" alt="left arrow icon" />
+                  <span>back</span>
+                </button>
+              </div>
+              <br />
+              <div class="projects__sidebar-title">
+                <h3>2 Lorem, ipsum dolor.</h3>
+                <span>side project</span>
+              </div>
+              <div class="projects__sidebar-image">
+                <img src="img/proj-1.jpg" alt="project image" />
+              </div>
+              <br />
+              <div class="projects__sidebar-about">
+                <h4>about</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+                  quod hic at eos! Nam, labore.
+                </p>
+              </div>
+              <br />
+              <div class="projects__sidebar-tech">
+                <h4>technologies</h4>
+                <ul>
+                  <li class="uppercase">html</li>
+                  <li class="uppercase">css</li>
+                  <li class="capitalize">javascript</li>
+                </ul>
+              </div>
+              <br />
+              <div class="projects__sidebar-links">
+                <a href="#">
+                  <span>visit website</span>
+                  <img src="img/earth-icon.svg" alt="earth icon" />
+                </a>
+                <a href="#">
+                  <span>source code</span>
+                  <img src="img/github-icon.svg" alt="github icon" />
+                </a>
+              </div>
+              <br />
+            </aside>
+
+            <div
+              class="projects__card practice-projects active"
+              role="gridcell"
+              tabindex="0"
+              data-num="2"
+            >
+              <img src="img/proj-1.jpg" alt="project image" />
+              <div class="projects__card-info">
+                <span class="top-text">click to view project info</span>
+                <div>
+                  <h3>Lorem, ipsum dolor.</h3>
+                  <span class="label">practice project</span>
+                  <ul>
+                    <li class="uppercase">html</li>
+                    <li class="uppercase">css</li>
+                    <li class="capitalize">javascript</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <aside class="projects__sidebar projects__sidebar-2">
+              <div class="projects__sidebar-btn">
+                <button class="back-btn">
+                  <img src="img/left-arrow-icon.svg" alt="left arrow icon" />
+                  <span>back</span>
+                </button>
+              </div>
+              <br />
+              <div class="projects__sidebar-title">
+                <h3>2 Lorem, ipsum dolor.</h3>
+                <span>side project</span>
+              </div>
+              <div class="projects__sidebar-image">
+                <img src="img/proj-1.jpg" alt="project image" />
+              </div>
+              <br />
+              <div class="projects__sidebar-about">
+                <h4>about</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+                  quod hic at eos! Nam, labore.
+                </p>
+              </div>
+              <br />
+              <div class="projects__sidebar-tech">
+                <h4>technologies</h4>
+                <ul>
+                  <li class="uppercase">html</li>
+                  <li class="uppercase">css</li>
+                  <li class="capitalize">javascript</li>
+                </ul>
+              </div>
+              <br />
+              <div class="projects__sidebar-links">
+                <a href="#">
+                  <span>visit website</span>
+                  <img src="img/earth-icon.svg" alt="earth icon" />
+                </a>
+                <a href="#">
+                  <span>source code</span>
+                  <img src="img/github-icon.svg" alt="github icon" />
+                </a>
+              </div>
+              <br />
+            </aside>
+
+            <div class="projects__overlay hidden"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!----------------------------- FOOTER ----------------------------->
+    <footer class="footer">
+      <div class="footer-container container">
+        <p>&copy; 2023 Shaina De Guzman.</p>
+        <ul>
+          <li>
+            <a href="#" title="facebook" class="facebook"
+              ><img src="img/facebook-icon.svg" alt="facebook icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#" title="github" class="github"
+              ><img src="img/github-icon.svg" alt="github icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#" title="linkedin" class="linkedin"
+              ><img src="img/linkedin-icon.svg" alt="linkedin icon"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button class="scroll-top-btn">
+      <img src="img/arrow-up-icon.svg" alt="arrow up icon" />
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/projects-filter.js"></script>
+  </body>
+</html>

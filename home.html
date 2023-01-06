@@ -37,26 +37,28 @@
           <ul class="nav__list">
             <li><a href="home.html" class="active">home</a></li>
             <li><a href="about.html">about</a></li>
-            <li><a href="home.html">projects</a></li>
-            <li><a href="home.html">contact</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
           </ul>
 
           <!-- MOBILE NAV OVERLAY -->
           <div class="nav__mobile-overlay hidden"></div>
 
           <!-- MOBILE NAV -->
-          <div class="nav__mobile">
+          <nav class="nav__mobile">
             <ul>
               <li class="nav__mobile-items">
                 <a href="home.html" class="active">home</a>
               </li>
               <li class="nav__mobile-items"><a href="about.html">about</a></li>
               <li class="nav__mobile-items">
-                <a href="home.html">projects</a>
+                <a href="projects.html">projects</a>
               </li>
-              <li class="nav__mobile-items"><a href="home.html">contact</a></li>
+              <li class="nav__mobile-items">
+                <a href="contact.html">contact</a>
+              </li>
             </ul>
-          </div>
+          </nav>
 
           <!-- MOBILE NAV BUTTON -->
           <button class="nav__btn">
@@ -109,7 +111,7 @@
         </div>
         <div class="featured-projects__card-container">
           <div
-            class="featured-projects__card"
+            class="featured-projects__card projects__card"
             role="gridcell"
             tabindex="0"
             data-num="1"
@@ -129,9 +131,9 @@
             </div>
           </div>
           <aside
-            class="featured-projects__sidebar featured-projects__sidebar-1"
+            class="featured-projects__sidebar projects__sidebar projects__sidebar-1"
           >
-            <div class="featured-projects__sidebar-btn">
+            <div class="featured-projects__sidebar-btn projects__sidebar-btn">
               <button class="back-btn">
                 <img src="img/left-arrow-icon.svg" alt="left arrow icon" />
                 <span>back</span>
@@ -177,7 +179,7 @@
           </aside>
 
           <div
-            class="featured-projects__card"
+            class="featured-projects__card projects__card"
             role="gridcell"
             tabindex="0"
             data-num="2"
@@ -197,9 +199,9 @@
             </div>
           </div>
           <aside
-            class="featured-projects__sidebar featured-projects__sidebar-2"
+            class="featured-projects__sidebar projects__sidebar projects__sidebar-2"
           >
-            <div class="featured-projects__sidebar-btn">
+            <div class="featured-projects__sidebar-btn projects__sidebar-btn">
               <button class="back-btn">
                 <img src="img/left-arrow-icon.svg" alt="left arrow icon" />
                 <span>back</span>
@@ -244,7 +246,9 @@
             <br />
           </aside>
 
-          <div class="featured-projects__overlay hidden"></div>
+          <div
+            class="featured-projects__overlay projects__overlay hidden"
+          ></div>
         </div>
       </div>
     </section>

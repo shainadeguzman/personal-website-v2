@@ -51,7 +51,7 @@
   animation: gradient 3s linear infinite;
 
   @include respond-to(sm) {
-    font-size: 3.6rem;
+    font-size: 3.4rem;
   }
 }
 
@@ -67,6 +67,16 @@
 
   @include respond-to(sm) {
     font-size: 3rem;
+  }
+}
+
+.section-title p {
+  font-weight: 400;
+  font-size: 2rem;
+  color: $color-light-secondary;
+
+  @include respond-to(sm) {
+    font-size: 1.8rem;
   }
 }
 

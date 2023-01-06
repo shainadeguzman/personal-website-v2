@@ -1,144 +1,50 @@
-.hero {
-  height: 60rem;
-  min-height: 30rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 9rem;
-  transform: scale(0.8);
-  opacity: 0;
-  transition: transform 1s ease, opacity 1s ease 0.2s;
+.projects {
+  margin-top: 18rem;
 
-  &.revealed {
-    transform: scale(1);
-    opacity: 1;
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5rem;
+    margin: 7rem 0 5rem 0;
+
+    @include respond-to(sm) {
+      column-gap: 3.5rem;
+    }
+  }
+
+  &__nav button {
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;
+    color: $color-light-secondary;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 1.7rem;
+    transition: color 0.4s ease;
+  }
+
+  &__nav button.uppercase {
+    text-transform: uppercase;
+  }
+
+  &__nav button.active {
+    font-weight: 700;
+    color: $color-light;
+    background-color: $color-light-blue;
+    padding: 0.7rem 2.6rem;
+
+    @include respond-to(sm) {
+      padding: 1rem 2.2rem;
+    }
+  }
+
+  &__nav button:hover {
+    color: $color-light;
   }
 
   &__container {
-    width: 70%;
-
-    @include respond-to(lg) {
-      width: 80%;
-    }
-
-    @include respond-to(md) {
-      width: 90%;
-    }
-
-    @include respond-to(sm) {
-      width: 100%;
-    }
-  }
-
-  h1 {
-    font-size: 4.2rem;
-    font-weight: 800;
-    margin-bottom: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background: $color-light; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      $color-light,
-      rgb(29, 59, 123),
-      $color-light
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      $color-light,
-      rgb(29, 59, 123),
-      $color-light
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-size: 200% auto;
-    animation: gradient 3s linear infinite;
-
-    @include respond-to(sm) {
-      font-size: 4rem;
-    }
-  }
-
-  p {
-    font-size: 2.2rem;
-    font-weight: 400;
-    color: $color-light-secondary;
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-    margin: 3.8rem auto 0 auto;
-    column-gap: 1.6rem;
-    border: 1px solid $color-light;
-    color: $color-light;
-    border-radius: 50px;
-    padding: 0.8rem 2.8rem;
-    width: max-content;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.5rem;
-    transition: all 0.4s ease;
-  }
-
-  a svg {
-    width: 1.7rem;
-  }
-
-  a svg path {
-    fill: $color-light;
-    transition: all 0.4s ease;
-  }
-
-  a:hover {
-    color: $color-dark-blue;
-    border-color: $color-light;
-    background-color: $color-light;
-  }
-
-  a:hover {
-    svg path {
-      fill: $color-dark-blue;
-    }
-  }
-}
-
-.featured-projects {
-  padding-top: 5rem;
-
-  &-title {
-    display: flex;
-    align-items: center;
-    margin-bottom: 6rem;
-    column-gap: 4rem;
-
-    @include respond-to(sm) {
-      column-gap: 2rem;
-    }
-  }
-
-  &-title span {
-    width: 100%;
-    height: 1px;
-    background-color: $color-light-border;
-    flex-shrink: 1;
-  }
-
-  h2 {
-    text-align: center;
-    font-weight: 600;
-    font-size: 2.2rem;
-    text-transform: uppercase;
-    position: relative;
-    flex-shrink: 0;
-    flex-grow: 1;
-  }
-
-  &__card-container {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -166,6 +72,39 @@
 
     @include respond-to(sm) {
       height: 24rem;
+    }
+  }
+
+  &__card.side-projects,
+  &__card.practice-projects,
+  &__card.all-projects {
+    transform: scale(0.9);
+    opacity: 0;
+    display: none;
+    animation: fade-in 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  &__card.side-projects.active,
+  &__card.practice-projects.active,
+  &__card.all-projects.active {
+    transform: scale(1);
+    opacity: 1;
+    display: block;
+  }
+
+  @keyframes fade-in {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+
+    50% {
+      display: none;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
     }
   }
 
@@ -482,12 +421,5 @@
 
   &__sidebar-links a:hover::after {
     width: 100%;
-  }
-}
-
-// ANIMATION
-@keyframes gradient {
-  to {
-    background-position: 200% center;
   }
 }
