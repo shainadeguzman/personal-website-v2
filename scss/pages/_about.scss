@@ -1,0 +1,114 @@
+.about {
+  margin-top: 18rem;
+
+  &__content p:first-child {
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: $color-light;
+    margin-bottom: 1.8rem;
+  }
+
+  &__content p:nth-child(2),
+  &__content p:last-child {
+    font-weight: 400;
+    font-size: 2.2rem;
+    color: $color-light-secondary;
+    margin-bottom: 1.8rem;
+  }
+}
+
+.skills {
+  &__container {
+    border: 1px solid $color-light-border;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    height: 18rem;
+    min-height: 10rem;
+
+    @include respond-to(md) {
+      flex-wrap: wrap;
+      height: max-content;
+    }
+  }
+
+  ul li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: $color-light;
+    font-weight: 600;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    flex-basis: calc(100% / 4);
+    height: 100%;
+    position: relative;
+
+    @include respond-to(md) {
+      flex-basis: 50%;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      flex-grow: 0;
+      padding: 3rem 0;
+    }
+
+    @include respond-to(sm) {
+      font-size: 2rem;
+      padding: 2rem 0;
+    }
+  }
+
+  ul li img {
+    width: 6.5rem;
+    margin-top: 1.2rem;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+
+    @include respond-to(sm) {
+      width: 6rem;
+    }
+  }
+
+  ul li span {
+    transition: transform 0.4s ease;
+  }
+
+  ul li:not(:last-child) {
+    border-right: 1px solid $color-light-border;
+
+    @include respond-to(md) {
+      border-right: none;
+    }
+  }
+
+  ul li:last-child,
+  ul li:nth-child(3) {
+    @include respond-to(md) {
+      border-top: 1px solid $color-light-border;
+    }
+  }
+
+  ul li:last-child::before,
+  ul li:nth-child(2)::before {
+    @include respond-to(md) {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 1px;
+      background-color: $color-light-border;
+      left: 0;
+    }
+  }
+
+  ul li:hover img,
+  ul li:hover span {
+    transform: translateY(-1rem);
+  }
+}

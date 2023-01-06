@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      href="img//favicon-16x16.png"
+      type="image/x-icon"
+    />
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Shaina De Guzman &VerticalLine; Front-end Web Developer</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+    </style>
+  </head>
+  <body id="body">
+    <header>
+      <!----------------------------- NAV ----------------------------->
+      <nav class="nav">
+        <div class="nav__container container">
+          <a href="home.html" class="nav__logo">Shaina.</a>
+          <ul class="nav__list">
+            <li><a href="home.html">home</a></li>
+            <li><a href="about.html" class="active">about</a></li>
+            <li><a href="home.html">projects</a></li>
+            <li><a href="home.html">contact</a></li>
+          </ul>
+
+          <!-- MOBILE NAV OVERLAY -->
+          <div class="nav__mobile-overlay hidden"></div>
+
+          <!-- MOBILE NAV -->
+          <div class="nav__mobile">
+            <ul>
+              <li class="nav__mobile-items">
+                <a href="home.html">home</a>
+              </li>
+              <li class="nav__mobile-items">
+                <a href="about.html" class="active">about</a>
+              </li>
+              <li class="nav__mobile-items">
+                <a href="home.html">projects</a>
+              </li>
+              <li class="nav__mobile-items"><a href="home.html">contact</a></li>
+            </ul>
+          </div>
+
+          <!-- MOBILE NAV BUTTON -->
+          <button class="nav__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!----------------------------- ABOUT ----------------------------->
+      <section class="about">
+        <div class="container">
+          <div class="section-title"><h1>about me.</h1></div>
+          <div class="about__content">
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>
+              This is a paragraph. Choosing a font combination for your website
+              is really important. You want to make sure. This is a paragraph.
+              This is a paragraph. Choosing a font combination for your website
+              is really important. You want to make sure. This is a paragraph.
+            </p>
+            <p>
+              This is a paragraph. Choosing a font combination for your website
+              is really important. You want to make sure. This is a paragraph.
+              This is a paragraph. Choosing a font combination for your website
+              is really important. You want to make sure. This is a paragraph.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!----------------------------- SKILLS ----------------------------->
+      <section class="skills section-padding">
+        <div class="container">
+          <div class="section-subtitle"><h2>my skills.</h2></div>
+          <div class="skills__container">
+            <ul>
+              <li>
+                <span>html</span><img src="img/html-logo.svg" alt="html logo" />
+              </li>
+              <li>
+                <span>css</span><img src="img/css-logo.svg" alt="css logo" />
+              </li>
+              <li>
+                <span>javascript</span
+                ><img src="img/js-logo.svg" alt="javascript logo" />
+              </li>
+              <li>
+                <span>sass</span><img src="img/sass-logo.svg" alt="sass logo" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!----------------------------- FOOTER ----------------------------->
+    <footer class="footer">
+      <div class="footer-container container">
+        <p>&copy; 2023 Shaina De Guzman.</p>
+        <ul>
+          <li>
+            <a href="#" title="facebook" class="facebook"
+              ><img src="img/facebook-icon.svg" alt="facebook icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#" title="github" class="github"
+              ><img src="img/github-icon.svg" alt="github icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#" title="linkedin" class="linkedin"
+              ><img src="img/linkedin-icon.svg" alt="linkedin icon"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button class="scroll-top-btn">
+      <img src="img/arrow-up-icon.svg" alt="arrow up icon" />
+    </button>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

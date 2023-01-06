@@ -36,14 +36,35 @@
 
   ul a {
     text-decoration: none;
+    border: 1px solid $color-light-border;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50px;
+    transition: background-color 0.4s ease;
   }
 
   ul a img {
-    width: 2.8rem;
+    width: 2.2rem;
+    padding: 0.4rem;
+  }
+
+  ul a.facebook:hover {
+    background-color: rgba(64, 100, 172, 1);
+  }
+
+  ul a.github:hover {
+    background-color: rgba(22, 21, 21, 1);
+  }
+
+  ul a.linkedin:hover {
+    background-color: rgba(0, 109, 166, 1);
   }
 
   ul li:not(:last-child) {
-    margin-right: 4rem;
+    margin-right: 3.8rem;
 
     @include respond-to(sm) {
       margin-right: 5rem;

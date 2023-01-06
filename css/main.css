@@ -86,6 +86,47 @@ button {
   padding-top: 15rem;
 }
 
+.section-title {
+  margin-bottom: 4.5rem;
+}
+
+.section-title h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 3.8rem;
+  letter-spacing: 1px;
+  letter-spacing: 1px;
+  background: rgb(255, 255, 255); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(29, 59, 123), rgb(255, 255, 255)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  -webkit-animation: gradient 3s linear infinite;
+          animation: gradient 3s linear infinite;
+}
+@media (max-width: 36em) {
+  .section-title h1 {
+    font-size: 3.6rem;
+  }
+}
+
+.section-subtitle {
+  margin-bottom: 3rem;
+}
+
+.section-subtitle h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3.2rem;
+  letter-spacing: 1px;
+}
+@media (max-width: 36em) {
+  .section-subtitle h2 {
+    font-size: 3rem;
+  }
+}
+
 ul li.uppercase {
   text-transform: uppercase;
 }
@@ -545,6 +586,116 @@ ul li.capitalize {
     background-position: 200% center;
   }
 }
+.about {
+  margin-top: 18rem;
+}
+.about__content p:first-child {
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1.8rem;
+}
+.about__content p:nth-child(2), .about__content p:last-child {
+  font-weight: 400;
+  font-size: 2.2rem;
+  color: rgb(197, 196, 199);
+  margin-bottom: 1.8rem;
+}
+
+.skills__container {
+  border: 1px solid rgba(255, 255, 255, 0.311);
+}
+.skills ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  height: 18rem;
+  min-height: 10rem;
+}
+@media (max-width: 48em) {
+  .skills ul {
+    flex-wrap: wrap;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+}
+.skills ul li {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 25%;
+  height: 100%;
+  position: relative;
+}
+@media (max-width: 48em) {
+  .skills ul li {
+    flex-basis: 50%;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-grow: 0;
+    padding: 3rem 0;
+  }
+}
+@media (max-width: 36em) {
+  .skills ul li {
+    font-size: 2rem;
+    padding: 2rem 0;
+  }
+}
+.skills ul li img {
+  width: 6.5rem;
+  margin-top: 1.2rem;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.4s ease;
+}
+@media (max-width: 36em) {
+  .skills ul li img {
+    width: 6rem;
+  }
+}
+.skills ul li span {
+  transition: transform 0.4s ease;
+}
+.skills ul li:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.311);
+}
+@media (max-width: 48em) {
+  .skills ul li:not(:last-child) {
+    border-right: none;
+  }
+}
+@media (max-width: 48em) {
+  .skills ul li:last-child,
+.skills ul li:nth-child(3) {
+    border-top: 1px solid rgba(255, 255, 255, 0.311);
+  }
+}
+@media (max-width: 48em) {
+  .skills ul li:last-child::before,
+.skills ul li:nth-child(2)::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.311);
+    left: 0;
+  }
+}
+.skills ul li:hover img,
+.skills ul li:hover span {
+  transform: translateY(-1rem);
+}
+
 .nav {
   border-bottom: 1px solid rgba(255, 255, 255, 0.311);
   height: 9rem;
@@ -783,12 +934,30 @@ ul li.capitalize {
 }
 .footer ul a {
   text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.311);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50px;
+  transition: background-color 0.4s ease;
 }
 .footer ul a img {
-  width: 2.8rem;
+  width: 2.2rem;
+  padding: 0.4rem;
+}
+.footer ul a.facebook:hover {
+  background-color: rgb(64, 100, 172);
+}
+.footer ul a.github:hover {
+  background-color: rgb(22, 21, 21);
+}
+.footer ul a.linkedin:hover {
+  background-color: rgb(0, 109, 166);
 }
 .footer ul li:not(:last-child) {
-  margin-right: 4rem;
+  margin-right: 3.8rem;
 }
 @media (max-width: 36em) {
   .footer ul li:not(:last-child) {

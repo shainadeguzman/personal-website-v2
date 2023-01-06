@@ -1,11 +1,9 @@
 let edge = 0;
+const scrolled = 400;
 
 let navBar = document.querySelector(".nav");
 
-let hero = document.querySelector(".hero");
-
 const scrollToTopBtn = document.querySelector(".scroll-top-btn");
-const heroHeight = document.querySelector(".hero").offsetHeight;
 
 const mobileNavBtn = document.querySelector(".nav__btn");
 const mobileNav = document.querySelector(".nav__mobile");
@@ -60,11 +58,11 @@ window.addEventListener("scroll", function () {
   edge = scrollTop;
 
   // REVEAL SCROLL TO TOP BUTTON
-  if (scrollTop > heroHeight - 100) {
+  if (scrollTop > scrolled - 100) {
     scrollToTopBtn.classList.add("reveal");
   }
 
-  if (heroHeight - 300 >= scrollTop) {
+  if (scrolled >= scrollTop) {
     scrollToTopBtn.classList.remove("reveal");
   }
 });
@@ -72,8 +70,4 @@ window.addEventListener("scroll", function () {
 // SCROLL TO TOP BUTTON
 scrollToTopBtn.addEventListener("click", function () {
   window.scrollTo(0, 0);
-});
-
-window.addEventListener("load", function () {
-  hero.classList.add("revealed");
 });

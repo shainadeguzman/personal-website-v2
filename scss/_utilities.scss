@@ -20,6 +20,56 @@
   padding-top: 15rem;
 }
 
+.section-title {
+  margin-bottom: 4.5rem;
+}
+
+.section-title h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 3.8rem;
+  letter-spacing: 1px;
+  letter-spacing: 1px;
+  background: $color-light; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    $color-light,
+    rgb(29, 59, 123),
+    $color-light
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    $color-light,
+    rgb(29, 59, 123),
+    $color-light
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  animation: gradient 3s linear infinite;
+
+  @include respond-to(sm) {
+    font-size: 3.6rem;
+  }
+}
+
+.section-subtitle {
+  margin-bottom: 3rem;
+}
+
+.section-subtitle h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3.2rem;
+  letter-spacing: 1px;
+
+  @include respond-to(sm) {
+    font-size: 3rem;
+  }
+}
+
 ul li.uppercase {
   text-transform: uppercase;
 }
