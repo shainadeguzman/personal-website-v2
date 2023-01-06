@@ -1,4 +1,4 @@
-# Personal Website V2 Magic
+# Personal Website V2 :new:
 
 Thank you for visiting the repo of my personal website version 2.
 I created this website because my passion and interest is in this kind of field and i also want to showcase what i have done and learned.
