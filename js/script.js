@@ -52,7 +52,7 @@ window.addEventListener("scroll", function () {
     navBar.style.background = "rgba(1, 14, 42, 1)";
   }
 
-  if (scrollTop <= 100) {
+  if (scrollTop <= 80) {
     navBar.style.background = "transparent";
   }
   edge = scrollTop;
