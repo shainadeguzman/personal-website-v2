@@ -9,6 +9,16 @@ const mobileNavBtn = document.querySelector(".nav__btn");
 const mobileNav = document.querySelector(".nav__mobile");
 const mobileNavItems = document.querySelectorAll(".nav__mobile-items");
 const mobileNavOverlay = document.querySelector(".nav__mobile-overlay");
+const tabIndexElements = document.querySelectorAll(".tabIndxs");
+
+// FUNCTIONS
+const addIndexFocus = function () {
+  tabIndexElements.forEach((tabEl) => (tabEl.tabIndex = ""));
+};
+
+const removeIndexFocus = function () {
+  tabIndexElements.forEach((tabEl) => (tabEl.tabIndex = -1));
+};
 
 // MOBILE NAVIGATION
 mobileNavBtn.addEventListener("click", function () {
@@ -16,6 +26,12 @@ mobileNavBtn.addEventListener("click", function () {
   mobileNav.classList.toggle("active");
   mobileNavOverlay.classList.toggle("hidden");
   document.getElementById("body").classList.toggle("overflow-hidden");
+
+  if (mobileNavBtn.classList.contains("active")) {
+    removeIndexFocus();
+  } else {
+    addIndexFocus();
+  }
 });
 
 mobileNavItems.forEach((item) => {
@@ -23,6 +39,7 @@ mobileNavItems.forEach((item) => {
   mobileNav.classList.remove("active");
   mobileNavOverlay.classList.add("hidden");
   document.getElementById("body").classList.remove("overflow-hidden");
+  addIndexFocus();
 });
 
 mobileNavOverlay.addEventListener("click", function () {
@@ -30,15 +47,18 @@ mobileNavOverlay.addEventListener("click", function () {
   mobileNav.classList.remove("active");
   mobileNavOverlay.classList.add("hidden");
   document.getElementById("body").classList.remove("overflow-hidden");
+  addIndexFocus();
 });
 
 window.addEventListener("resize", function () {
   const vw = Math.max(document.documentElement.clientWidth);
-  if (vw >= 768) {
+  console.log(vw);
+  if (vw >= 992) {
     mobileNavBtn.classList.remove("active");
     mobileNav.classList.remove("active");
     mobileNavOverlay.classList.add("hidden");
     document.getElementById("body").classList.remove("overflow-hidden");
+    addIndexFocus();
   }
 });
 
