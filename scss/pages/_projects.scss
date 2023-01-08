@@ -126,6 +126,16 @@
     transform: scale(1.05);
   }
 
+  &__card img {
+    @include respond-to(lg) {
+      transform: scale(1.05);
+    }
+
+    @include respond-to(sm) {
+      transform: scale(1.05);
+    }
+  }
+
   &__card > div {
     background-color: rgba(1, 14, 42, 0.55);
     position: absolute;
@@ -141,6 +151,16 @@
 
   &__card:hover > div {
     opacity: 1;
+  }
+
+  &__card > div.projects__card-info {
+    @include respond-to(lg) {
+      opacity: 1;
+    }
+
+    @include respond-to(sm) {
+      opacity: 1;
+    }
   }
 
   &__card-info {
@@ -162,6 +182,15 @@
     transform: translateY(0);
   }
 
+  &__card &__card-info span.top-text {
+    @include respond-to(lg) {
+      transform: translateY(0);
+    }
+
+    @include respond-to(sm) {
+      transform: translateY(0);
+    }
+  }
   &__card-info span::first-letter {
     text-transform: uppercase;
   }
@@ -178,6 +207,18 @@
   &__card:hover &__card-info > div {
     transform: translateY(0);
     opacity: 1;
+  }
+
+  &__card &__card-info > div {
+    @include respond-to(lg) {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @include respond-to(sm) {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   &__card-info h3 {
