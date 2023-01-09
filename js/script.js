@@ -52,7 +52,6 @@ mobileNavOverlay.addEventListener("click", function () {
 
 window.addEventListener("resize", function () {
   const vw = Math.max(document.documentElement.clientWidth);
-  console.log(vw);
   if (vw >= 992) {
     mobileNavBtn.classList.remove("active");
     mobileNav.classList.remove("active");
@@ -80,10 +79,12 @@ window.addEventListener("scroll", function () {
   // REVEAL SCROLL TO TOP BUTTON
   if (scrollTop > scrolled - 100) {
     scrollToTopBtn.classList.add("reveal");
+    scrollToTopBtn.tabIndex = "";
   }
 
   if (scrolled >= scrollTop) {
     scrollToTopBtn.classList.remove("reveal");
+    scrollToTopBtn.tabIndex = -1;
   }
 });
 

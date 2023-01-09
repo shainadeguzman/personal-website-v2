@@ -33,41 +33,45 @@
       <!----------------------------- NAV ----------------------------->
       <nav class="nav">
         <div class="nav__container container">
-          <a href="home.html" class="nav__logo">Shaina.</a>
+          <a href="home.html" class="nav__logo tabIndxs tabIndxsProj"
+            >Shaina.</a
+          >
           <ul class="nav__list">
-            <li><a href="home.html">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="projects.html" class="active">projects</a></li>
-            <li><a href="contact.html">contact</a></li>
+            <li><a href="home.html" class="tabIndxsProj">home</a></li>
+            <li><a href="about.html" class="tabIndxsProj">about</a></li>
+            <li>
+              <a href="projects.html" class="active tabIndxsProj">projects</a>
+            </li>
+            <li><a href="contact.html" class="tabIndxsProj">contact</a></li>
           </ul>
 
           <!-- MOBILE NAV OVERLAY -->
           <div class="nav__mobile-overlay hidden"></div>
 
-          <!-- MOBILE NAV -->
-          <nav class="nav__mobile">
-            <ul>
-              <li class="nav__mobile-items">
-                <a href="home.html">home</a>
-              </li>
-              <li class="nav__mobile-items">
-                <a href="about.html">about</a>
-              </li>
-              <li class="nav__mobile-items">
-                <a href="projects.html" class="active">projects</a>
-              </li>
-              <li class="nav__mobile-items">
-                <a href="contact.html">contact</a>
-              </li>
-            </ul>
-          </nav>
-
           <!-- MOBILE NAV BUTTON -->
-          <button class="nav__btn">
+          <button class="nav__btn tabIndxsProj">
             <span></span>
             <span></span>
             <span></span>
           </button>
+
+          <!-- MOBILE NAV -->
+          <nav class="nav__mobile">
+            <ul>
+              <li class="nav__mobile-items">
+                <a href="home.html" class="tabIndxsProj">home</a>
+              </li>
+              <li class="nav__mobile-items">
+                <a href="about.html" class="tabIndxsProj">about</a>
+              </li>
+              <li class="nav__mobile-items">
+                <a href="projects.html" class="active tabIndxsProj">projects</a>
+              </li>
+              <li class="nav__mobile-items">
+                <a href="contact.html" class="tabIndxsProj">contact</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </nav>
     </header>
@@ -84,15 +88,21 @@
             </p>
           </div>
           <nav class="projects__nav">
-            <button class="filter-btn all-projects active">all</button>
-            <button class="filter-btn side-projects">side projects</button>
-            <button class="filter-btn practice-projects">
+            <button
+              class="filter-btn all-projects active tabIndxs tabIndxsProj"
+            >
+              all
+            </button>
+            <button class="filter-btn side-projects tabIndxs tabIndxsProj">
+              side projects
+            </button>
+            <button class="filter-btn practice-projects tabIndxs tabIndxsProj">
               practice projects
             </button>
           </nav>
           <div class="projects__container">
             <div
-              class="projects__card side-projects active"
+              class="projects__card side-projects active tabIndxs tabIndxsProj"
               role="gridcell"
               tabindex="0"
               data-num="1"
@@ -158,7 +168,7 @@
             </aside>
 
             <div
-              class="projects__card side-projects active"
+              class="projects__card side-projects active tabIndxs tabIndxsProj"
               role="gridcell"
               tabindex="0"
               data-num="2"
@@ -224,7 +234,7 @@
             </aside>
 
             <div
-              class="projects__card practice-projects active"
+              class="projects__card practice-projects active tabIndxs tabIndxsProj"
               role="gridcell"
               tabindex="0"
               data-num="2"
@@ -301,17 +311,17 @@
         <p>&copy; 2023 Shaina De Guzman.</p>
         <ul>
           <li>
-            <a href="#" title="facebook" class="facebook"
+            <a href="#" title="facebook" class="facebook tabIndxs tabIndxsProj"
               ><img src="img/facebook-icon.svg" alt="facebook icon"
             /></a>
           </li>
           <li>
-            <a href="#" title="github" class="github"
+            <a href="#" title="github" class="github tabIndxs tabIndxsProj"
               ><img src="img/github-icon.svg" alt="github icon"
             /></a>
           </li>
           <li>
-            <a href="#" title="linkedin" class="linkedin"
+            <a href="#" title="linkedin" class="linkedin tabIndxs tabIndxsProj"
               ><img src="img/linkedin-icon.svg" alt="linkedin icon"
             /></a>
           </li>
@@ -320,7 +330,7 @@
     </footer>
 
     <!-- SCROLL TO TOP BUTTON -->
-    <button class="scroll-top-btn">
+    <button class="scroll-top-btn tabIndxs tabIndxsProj">
       <img src="img/arrow-up-icon.svg" alt="arrow up icon" />
     </button>
 

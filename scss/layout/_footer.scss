@@ -51,16 +51,25 @@
     padding: 0.2rem;
   }
 
-  ul a.facebook:hover {
+  ul a.facebook:hover,
+  ul a.facebook:focus-visible {
     background-color: rgba(64, 100, 172, 1);
+    outline-color: transparent;
+    outline-width: 1px;
   }
 
-  ul a.github:hover {
+  ul a.github:hover,
+  ul a.github:focus-visible {
     background-color: rgba(22, 21, 21, 1);
+    outline-color: transparent;
+    outline-width: 1px;
   }
 
-  ul a.linkedin:hover {
+  ul a.linkedin:hover,
+  ul a.linkedin:focus-visible {
     background-color: rgba(0, 109, 166, 1);
+    outline-color: transparent;
+    outline-width: 1px;
   }
 
   ul li:not(:last-child) {

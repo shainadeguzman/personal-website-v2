@@ -84,6 +84,7 @@
     width: 4.5rem;
     height: 4rem;
     position: relative;
+    z-index: 6;
     display: none;
     align-items: center;
     justify-content: center;
@@ -118,7 +119,7 @@
     width: 4.5rem;
     height: 4.5rem;
     transform: rotate(90deg);
-    border: 1px solid $color-light-border;
+    border: 2px solid $color-light-border;
     border-radius: 50px;
   }
 
@@ -227,5 +228,22 @@
 
   &__mobile-overlay.hidden {
     display: none;
+  }
+
+  &__logo,
+  &__list a,
+  &__mobile ul a,
+  &__btn {
+    outline: 2px dotted transparent;
+    transition: outline-offset 0.2s ease;
+    outline-offset: 0;
+  }
+
+  &__logo:focus-visible,
+  &__list a:focus-visible,
+  &__btn:focus-visible,
+  &__mobile a:focus-visible {
+    outline: 2px dashed $color-light;
+    outline-offset: 5px;
   }
 }

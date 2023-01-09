@@ -16,7 +16,12 @@
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  transition: right 0.4s ease;
+  transition: right 0.4s ease, outline-offset 0.2s ease;
+
+  &:focus-visible {
+    outline: 2px dashed $color-light;
+    outline-offset: 5px;
+  }
 
   img {
     width: 50%;

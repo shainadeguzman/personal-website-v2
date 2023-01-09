@@ -33,7 +33,10 @@
       <!----------------------------- NAV ----------------------------->
       <nav class="nav">
         <div class="nav__container container">
-          <a href="home.html" class="nav__logo tabIndxs tabIndxsProj"
+          <a
+            href="home.html"
+            aria-labelledby="navigation link logo"
+            class="nav__logo tabIndxs tabIndxsProj"
             >Shaina.</a
           >
           <ul class="nav__list">
@@ -45,6 +48,13 @@
 
           <!-- MOBILE NAV OVERLAY -->
           <div class="nav__mobile-overlay hidden"></div>
+
+          <!-- MOBILE NAV BUTTON -->
+          <button class="nav__btn tabIndxsProj">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
           <!-- MOBILE NAV -->
           <nav class="nav__mobile">
@@ -63,13 +73,6 @@
               </li>
             </ul>
           </nav>
-
-          <!-- MOBILE NAV BUTTON -->
-          <button class="nav__btn tabIndxsProj">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
         </div>
       </nav>
 

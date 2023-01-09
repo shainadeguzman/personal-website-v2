@@ -61,13 +61,10 @@ projectsCard.forEach((card) =>
   })
 );
 
-// KEEP DRY
-
 projectBackBtn.forEach((backBtn) =>
   backBtn.addEventListener("click", function (e) {
     const target = e.target.classList[0];
     if (target === "back-btn") {
-      console.log(backBtn.parentElement);
       backBtn.parentElement.classList.remove("active");
       projectsOverlay.classList.add("hidden");
       bodyOverFlow("scroll");

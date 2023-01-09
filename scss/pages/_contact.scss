@@ -92,12 +92,21 @@
     font-weight: 500;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     border: none;
+    outline: 2px dotted transparent;
   }
 
   &__btn:hover {
     transform: scale(1.03);
     box-shadow: 0 3px 8px rgba(255, 255, 255, 0.103),
       0 10px 10px rgba(255, 255, 255, 0.134);
+  }
+
+  &__btn:focus-visible {
+    transform: scale(1.03);
+    box-shadow: 0 3px 8px rgba(255, 255, 255, 0.103),
+      0 10px 10px rgba(255, 255, 255, 0.134);
+    outline: 2px dotted $color-light;
+    outline-offset: 8px;
   }
 
   &__btn img {

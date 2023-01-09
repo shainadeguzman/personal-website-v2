@@ -80,7 +80,7 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.5rem;
-    transition: all 0.4s ease;
+    transition: all 0.4s ease, padding 0.4s ease;
   }
 
   a svg {
@@ -92,13 +92,19 @@
     transition: all 0.4s ease;
   }
 
-  a:hover {
+  a:focus-visible {
+    outline: none;
+  }
+
+  a:hover,
+  a:focus-visible {
     color: $color-dark-blue;
     border-color: $color-light;
     background-color: $color-light;
   }
 
-  a:hover {
+  a:hover,
+  a:focus-visible {
     svg path {
       fill: $color-dark-blue;
     }
@@ -142,7 +148,7 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
-    gap: 6rem 5rem;
+    gap: 7rem;
 
     @include respond-to(lg) {
       grid-template-columns: 0.9fr;
@@ -156,15 +162,23 @@
   &__card {
     border-radius: 20px;
     position: relative;
-    height: 30rem;
+    height: 34rem;
     cursor: pointer;
     overflow: hidden;
+    outline: 2px dotted transparent;
+    outline-offset: 0;
     box-shadow: 0 14px 28px rgba(1, 5, 14, 0.229),
       0 10px 10px rgba(1, 5, 14, 0.229);
+    transition: outline-offset 0.2s ease;
 
     @include respond-to(sm) {
-      height: 24rem;
+      height: 26rem;
     }
+  }
+
+  &__card:focus-visible {
+    outline: 2px dashed $color-light;
+    outline-offset: 5px;
   }
 
   &__card img {
@@ -181,7 +195,8 @@
     pointer-events: none;
   }
 
-  &__card:hover img {
+  &__card:hover img,
+  &__card:focus-visible img {
     transform: scale(1.05);
   }
 
@@ -196,7 +211,7 @@
   }
 
   &__card > div {
-    background-color: rgba(1, 14, 42, 0.55);
+    background: rgba(1, 9, 27, 0.731);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -208,11 +223,13 @@
     pointer-events: none;
   }
 
-  &__card:hover > div {
+  &__card:hover > div,
+  &__card:focus-visible > div {
     opacity: 1;
   }
 
-  &__card > div.featured-projects__card-info {
+  &__card > div.featured-projects__card-info,
+  &__card:focus-visible > div.featured-projects__card-info {
     @include respond-to(lg) {
       opacity: 1;
     }
@@ -225,19 +242,29 @@
   &__card-info {
     padding: 3rem;
     color: $color-light;
+
+    @include respond-to(sm) {
+      padding: 2rem;
+    }
   }
 
   &__card-info span.top-text {
     text-align: center;
     display: block;
     font-size: 1.6rem;
-    font-weight: 400;
-    opacity: 0.9;
+    font-weight: 300;
+    opacity: 0.8;
     transform: translateY(-3rem);
     transition: all 0.4s ease;
+
+    @include respond-to(sm) {
+      transform: translateY(-2rem);
+      opacity: 0;
+    }
   }
 
-  &__card:hover &__card-info span.top-text {
+  &__card:hover &__card-info span.top-text,
+  &__card:focus-visible &__card-info span.top-text {
     transform: translateY(0);
   }
 
@@ -262,9 +289,15 @@
     transform: translateY(2.5rem);
     transition: all 0.4s ease;
     opacity: 0;
+
+    @include respond-to(sm) {
+      bottom: 2rem;
+      left: 2rem;
+    }
   }
 
-  &__card:hover &__card-info > div {
+  &__card:hover &__card-info > div,
+  &__card:focus-visible &__card-info > div {
     transform: translateY(0);
     opacity: 1;
   }
@@ -285,6 +318,10 @@
     font-weight: 600;
     font-size: 2.2rem;
     line-height: 1.2;
+
+    @include respond-to(sm) {
+      font-size: 2rem;
+    }
   }
 
   &__card-info span.label {
@@ -293,7 +330,7 @@
     font-size: 1.6rem;
     color: $color-light-secondary;
     text-align: left;
-    margin-bottom: 2.4rem;
+    margin-bottom: 2rem;
   }
 
   &__card-info ul {
@@ -337,7 +374,7 @@
     position: fixed;
     overflow-y: scroll;
     z-index: 6;
-    width: 32%;
+    width: 50rem;
     height: 100vh;
     right: -70%;
     top: 0;
@@ -347,15 +384,15 @@
     transition: right 0.4s ease;
 
     @include respond-to(lg) {
-      width: 36%;
-    }
-
-    @include respond-to(md) {
       width: 45%;
     }
 
-    @include respond-to(sm) {
+    @include respond-to(md) {
       width: 50%;
+    }
+
+    @include respond-to(sm) {
+      width: 60%;
     }
   }
 
@@ -376,6 +413,14 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    outline: 2px dotted transparent;
+    transition: outline-offset 0.2s ease;
+    outline-offset: 0;
+  }
+
+  &__sidebar-btn .back-btn:focus-visible {
+    outline: 2px dashed $color-light;
+    outline-offset: 5px;
   }
 
   &__sidebar.active .back-btn {
@@ -417,11 +462,11 @@
   &__sidebar-image {
     margin-top: 2rem;
     width: 100%;
-    height: 20rem;
+    height: 24rem;
     border-radius: 20px;
 
     @include respond-to(sm) {
-      height: 15rem;
+      height: 17rem;
     }
   }
 
@@ -481,7 +526,7 @@
     margin-bottom: 7rem;
     display: flex;
     align-items: center;
-    row-gap: 1.8rem;
+    row-gap: 2.2rem;
 
     @include respond-to(md) {
       flex-direction: column;
@@ -496,14 +541,18 @@
     position: relative;
     padding-bottom: 0.4rem;
     display: none;
+    align-items: center;
+    outline: 2px dotted transparent;
+    transition: outline-offset 0.2s ease;
+    outline-offset: 0;
   }
 
   &__sidebar.active &__sidebar-links a {
-    display: unset;
+    display: flex;
   }
 
   &__sidebar-links a:first-child {
-    margin-right: 3rem;
+    margin-right: 4rem;
   }
 
   &__sidebar-links a span {
@@ -528,8 +577,14 @@
     transition: width 0.4s ease;
   }
 
-  &__sidebar-links a:hover::after {
+  &__sidebar-links a:hover::after,
+  &__sidebar-links a:focus-visible::after {
     width: 100%;
+  }
+
+  &__sidebar-links a:focus-visible {
+    outline: 2px dashed $color-light;
+    outline-offset: 5px;
   }
 }
 
