@@ -11,7 +11,7 @@ projectsFilterNav.addEventListener("click", function (e) {
       .forEach((btn) => btn.classList.remove("active"));
     projectsFilterNav.querySelector(`.${targetBtn}`).classList.add("active");
     document.querySelectorAll(".projects__card").forEach((card) => {
-      if (card.classList[1] === targetBtn) {
+      if (targetBtn === card.classList[1]) {
         card.classList.add("active");
       } else if (targetBtn === "all-projects") {
         card.classList.add("active");

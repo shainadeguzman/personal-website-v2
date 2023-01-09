@@ -979,6 +979,9 @@ ul li.capitalize {
   font-weight: 600;
   text-transform: capitalize;
 }
+.featured-projects__sidebar-links a span.first-l-lowercase {
+  text-transform: lowercase;
+}
 .featured-projects__sidebar-links a img {
   width: 2rem;
 }
@@ -1593,6 +1596,9 @@ ul li.capitalize {
   font-size: 1.6rem;
   font-weight: 600;
   text-transform: capitalize;
+}
+.projects__sidebar-links a span.first-l-lowercase {
+  text-transform: lowercase;
 }
 .projects__sidebar-links a img {
   width: 2rem;

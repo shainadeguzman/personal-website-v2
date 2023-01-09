@@ -500,6 +500,10 @@
     text-transform: capitalize;
   }
 
+  &__sidebar-links a span.first-l-lowercase {
+    text-transform: lowercase;
+  }
+
   &__sidebar-links a img {
     width: 2rem;
   }

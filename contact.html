@@ -78,16 +78,14 @@
         <div class="container">
           <div class="section-title">
             <h1>contact.</h1>
-            <p>
-              This is a paragraph. Choosing a font combination for your website
-              is really important.
-            </p>
+            <p>Got a question or just want to say hello? Go ahead.</p>
           </div>
 
-          <form method="POST" class="contact__form">
+          <form method="POST" data-netlify="true" class="contact__form">
             <div class="contact__input-group">
               <input
                 type="text"
+                name="name"
                 class="input full-name tabIndxs"
                 placeholder="full name"
               />
@@ -96,6 +94,7 @@
             <div class="contact__input-group">
               <input
                 type="email"
+                name="email"
                 class="input email tabIndxs"
                 placeholder="email"
               />
@@ -104,11 +103,12 @@
             <div class="contact__input-group">
               <textarea
                 class="input msg tabIndxs"
+                name="message"
                 placeholder="message"
               ></textarea>
               <span class="error">this field is required</span>
             </div>
-            <button class="contact__btn tabIndxs">
+            <button class="contact__btn tabIndxs" name="submit">
               <span>send message</span>
               <img src="img/send-icon.svg" alt="send icon" />
             </button>
