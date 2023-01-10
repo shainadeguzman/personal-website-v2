@@ -36,40 +36,22 @@
 
   ul a {
     text-decoration: none;
-    border: 1px solid $color-light-border;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50px;
-    transition: background-color 0.4s ease;
+    outline: 2px dotted transparent;
+    transition: all 0.2s ease;
+    outline-offset: 0;
+  }
+
+  ul a:focus-visible {
+    outline: 2px dashed $color-light;
+    outline-offset: 5px;
   }
 
   ul a img {
-    width: 2rem;
+    width: 2.5rem;
     padding: 0.2rem;
-  }
-
-  ul a.facebook:hover,
-  ul a.facebook:focus-visible {
-    background-color: rgba(64, 100, 172, 1);
-    outline-color: transparent;
-    outline-width: 1px;
-  }
-
-  ul a.github:hover,
-  ul a.github:focus-visible {
-    background-color: rgba(22, 21, 21, 1);
-    outline-color: transparent;
-    outline-width: 1px;
-  }
-
-  ul a.linkedin:hover,
-  ul a.linkedin:focus-visible {
-    background-color: rgba(0, 109, 166, 1);
-    outline-color: transparent;
-    outline-width: 1px;
   }
 
   ul li:not(:last-child) {
