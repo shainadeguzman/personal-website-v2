@@ -41,9 +41,7 @@ body {
   box-sizing: border-box;
   line-height: 1.7;
   counter-reset: item;
-}
-body.overflow-hidden {
-  overflow-y: hidden;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 h1,
@@ -128,7 +126,7 @@ button {
 }
 
 .section-title p {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 2rem;
   color: rgb(197, 196, 199);
 }
@@ -152,13 +150,14 @@ ul li.capitalize {
 
 .nav {
   border-bottom: 1px solid rgba(255, 255, 255, 0.311);
+  background-color: rgb(1, 14, 42);
   height: 9rem;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  transition: top 0.4s ease;
   z-index: 5;
+  transition: top 0.4s ease, background-color 0.3s ease;
 }
 .nav__container {
   height: 100%;
@@ -184,14 +183,14 @@ ul li.capitalize {
   }
 }
 .nav__list li:not(:last-child) {
-  margin-right: 7rem;
+  margin-right: 5.5rem;
 }
 .nav__list a {
   text-decoration: none;
   color: rgb(197, 196, 199);
   text-transform: uppercase;
   transition: color 0.4s ease;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.8rem;
   position: relative;
 }
@@ -218,8 +217,30 @@ ul li.capitalize {
   right: 50%;
   transform: translateX(-50%);
 }
+.nav__list li:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .nav__list a:hover {
   color: rgb(255, 255, 255);
+}
+.nav__list button {
+  background-color: transparent;
+  margin-left: 0.2rem;
+  cursor: pointer;
+  border: none;
+  transition: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav__list button svg {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+.nav__list button.active svg path {
+  fill: rgb(1, 14, 42);
 }
 .nav__btn {
   background-color: transparent;
@@ -311,6 +332,28 @@ ul li.capitalize {
 .nav__mobile ul li:not(:last-child) {
   margin-bottom: 4rem;
 }
+.nav__mobile li:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav__mobile button {
+  background-color: transparent;
+  margin-top: 4rem;
+  cursor: pointer;
+  border: none;
+  transition: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav__mobile button svg {
+  width: 3.4rem;
+  height: 3.4rem;
+}
+.nav__mobile button.active svg path {
+  fill: rgb(1, 14, 42);
+}
 .nav__mobile ul a {
   text-decoration: none;
   color: rgb(197, 196, 199);
@@ -320,7 +363,10 @@ ul li.capitalize {
   font-size: 2rem;
   display: none;
 }
-.nav__mobile.active a {
+.nav__mobile ul button {
+  display: none;
+}
+.nav__mobile.active a, .nav__mobile.active ul button {
   display: unset;
 }
 .nav__mobile a.active {
@@ -355,12 +401,12 @@ ul li.capitalize {
 .nav__mobile-overlay.hidden {
   display: none;
 }
-.nav__logo, .nav__list a, .nav__mobile ul a, .nav__btn {
+.nav__logo, .nav__list a, .nav__mobile ul a, .nav__mobile ul button, .nav__btn, .nav__list button {
   outline: 2px dotted transparent;
   transition: all 0.2s ease;
   outline-offset: 0;
 }
-.nav__logo:focus-visible, .nav__list a:focus-visible, .nav__btn:focus-visible, .nav__mobile a:focus-visible {
+.nav__logo:focus-visible, .nav__list a:focus-visible, .nav__btn:focus-visible, .nav__mobile a:focus-visible, .nav__mobile button:focus-visible, .nav__list button:focus-visible {
   outline: 2px dashed rgb(255, 255, 255);
   outline-offset: 5px;
 }
@@ -413,12 +459,11 @@ ul li.capitalize {
   outline: 2px dashed rgb(255, 255, 255);
   outline-offset: 5px;
 }
-.footer ul a img {
-  width: 2.5rem;
-  padding: 0.2rem;
+.footer ul a svg {
+  width: 2.7rem;
 }
 .footer ul li:not(:last-child) {
-  margin-right: 3.2rem;
+  margin-right: 3.8rem;
 }
 @media (max-width: 36em) {
   .footer ul li:not(:last-child) {
@@ -445,7 +490,7 @@ ul li.capitalize {
   outline: 2px dashed rgb(255, 255, 255);
   outline-offset: 5px;
 }
-.scroll-top-btn img {
+.scroll-top-btn svg {
   width: 50%;
   height: 50%;
 }
@@ -507,7 +552,7 @@ ul li.capitalize {
 }
 .hero p {
   font-size: 2.2rem;
-  font-weight: 400;
+  font-weight: 500;
   color: rgb(197, 196, 199);
 }
 .hero a {
@@ -613,7 +658,7 @@ ul li.capitalize {
 }
 @media (max-width: 36em) {
   .featured-projects__card {
-    height: 28rem;
+    height: 32rem;
   }
 }
 .featured-projects__card:focus-visible {
@@ -648,7 +693,7 @@ ul li.capitalize {
   }
 }
 .featured-projects__card > div {
-  background: linear-gradient(rgba(1, 9, 27, 0.128), rgba(1, 8, 27, 0.955));
+  background: linear-gradient(rgba(255, 255, 255, 0.13), rgba(1, 8, 27, 0.798));
   position: absolute;
   top: 0;
   bottom: 0;
@@ -685,10 +730,11 @@ ul li.capitalize {
   text-align: center;
   display: block;
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 400;
   opacity: 0.8;
   transform: translateY(-3rem);
   transition: all 0.4s ease;
+  color: rgb(20, 39, 80);
 }
 @media (max-width: 36em) {
   .featured-projects__card-info span.top-text {
@@ -849,12 +895,12 @@ ul li.capitalize {
 .featured-projects__sidebar.active .back-btn {
   display: flex;
 }
-.featured-projects__sidebar-btn .back-btn img {
+.featured-projects__sidebar-btn .back-btn svg {
   width: 2.2rem;
   pointer-events: none;
 }
 .featured-projects__sidebar-btn .back-btn span {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 2rem;
   color: rgb(255, 255, 255);
   text-transform: capitalize;
@@ -871,7 +917,7 @@ ul li.capitalize {
 }
 .featured-projects__sidebar-title span {
   display: block;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.6rem;
   color: rgb(197, 196, 199);
   text-align: left;
@@ -880,12 +926,12 @@ ul li.capitalize {
 .featured-projects__sidebar-image {
   margin-top: 2rem;
   width: 100%;
-  height: 26rem;
+  height: 30rem;
   border-radius: 20px;
 }
 @media (max-width: 36em) {
   .featured-projects__sidebar-image {
-    height: 18rem;
+    height: 22rem;
   }
 }
 .featured-projects__sidebar-image img {
@@ -907,6 +953,7 @@ ul li.capitalize {
 .featured-projects__sidebar-about p {
   color: rgb(197, 196, 199);
   font-size: 1.8rem;
+  font-weight: 500;
 }
 .featured-projects__sidebar-tech ul {
   margin: 0;
@@ -972,7 +1019,7 @@ ul li.capitalize {
 .featured-projects__sidebar-links a span.first-l-lowercase {
   text-transform: lowercase;
 }
-.featured-projects__sidebar-links a img {
+.featured-projects__sidebar-links a svg {
   width: 2rem;
 }
 .featured-projects__sidebar-links a::after {
@@ -1068,7 +1115,7 @@ ul li.capitalize {
     padding: 2rem 0;
   }
 }
-.skills ul li img {
+.skills ul li svg {
   width: 6.5rem;
   margin-top: 1.2rem;
   display: block;
@@ -1077,7 +1124,7 @@ ul li.capitalize {
   transition: transform 0.4s ease;
 }
 @media (max-width: 36em) {
-  .skills ul li img {
+  .skills ul li svg {
     width: 6rem;
   }
 }
@@ -1109,7 +1156,7 @@ ul li.capitalize {
     left: 0;
   }
 }
-.skills ul li:hover img,
+.skills ul li:hover svg,
 .skills ul li:hover span {
   transform: translateY(-1rem);
 }
@@ -1197,7 +1244,7 @@ ul li.capitalize {
 }
 @media (max-width: 36em) {
   .projects__card {
-    height: 28rem;
+    height: 32rem;
   }
 }
 .projects__card:focus-visible {
@@ -1270,7 +1317,7 @@ ul li.capitalize {
   }
 }
 .projects__card > div {
-  background: linear-gradient(rgba(1, 9, 27, 0.128), rgba(1, 8, 27, 0.955));
+  background: linear-gradient(rgba(255, 255, 255, 0.13), rgba(1, 8, 27, 0.798));
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1303,11 +1350,14 @@ ul li.capitalize {
     padding: 2rem;
   }
 }
+.projects__card-info > div {
+  position: relative;
+}
 .projects__card-info span.top-text {
   text-align: center;
   display: block;
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 400;
   opacity: 0.8;
   transform: translateY(-3rem);
   transition: all 0.4s ease;
@@ -1472,7 +1522,7 @@ ul li.capitalize {
 .projects__sidebar.active .back-btn {
   display: flex;
 }
-.projects__sidebar-btn .back-btn img {
+.projects__sidebar-btn .back-btn svg {
   width: 2.2rem;
   pointer-events: none;
 }
@@ -1502,13 +1552,13 @@ ul li.capitalize {
 }
 .projects__sidebar-image {
   margin-top: 2rem;
-  height: 28rem;
+  height: 30rem;
   border-radius: 20px;
   width: 95%;
 }
 @media (max-width: 36em) {
   .projects__sidebar-image {
-    height: 18rem;
+    height: 22rem;
   }
 }
 .projects__sidebar-image img {
@@ -1594,7 +1644,7 @@ ul li.capitalize {
 .projects__sidebar-links a span.first-l-lowercase {
   text-transform: lowercase;
 }
-.projects__sidebar-links a img {
+.projects__sidebar-links a svg {
   width: 2rem;
 }
 .projects__sidebar-links a::after {
@@ -1720,7 +1770,7 @@ ul li.capitalize {
   outline: 2px dotted rgb(255, 255, 255);
   outline-offset: 8px;
 }
-.contact__btn img {
+.contact__btn svg {
   width: 1.8rem;
 }
 .contact__input-group span.error {
@@ -1737,4 +1787,348 @@ ul li.capitalize {
 }
 .contact__input-group span.error.active {
   opacity: 1;
+}
+
+body#body.light {
+  background: unset;
+  background: rgb(255, 255, 255);
+  background-repeat: unset;
+  background-size: unset;
+}
+body#body.light .section-title h1 {
+  color: rgb(1, 14, 42);
+  -webkit-animation: unset;
+          animation: unset;
+}
+body#body.light .section-title p {
+  color: rgba(1, 14, 42, 0.694);
+}
+body#body.light .section-title p b {
+  color: rgb(1, 14, 42);
+}
+body#body.light .section-subtitle h2 {
+  color: rgb(1, 14, 42);
+}
+body#body.light .nav {
+  border-bottom: 1px solid rgba(180, 180, 180, 0.926);
+  background-color: rgb(255, 255, 255);
+}
+body#body.light .nav__logo {
+  color: rgb(1, 14, 42);
+}
+body#body.light .nav__list a {
+  text-decoration: none;
+  color: rgba(1, 14, 42, 0.694);
+}
+body#body.light .nav__list a.active {
+  color: rgb(1, 14, 42);
+}
+body#body.light .nav__list a.active::after {
+  background-color: rgb(1, 14, 42);
+}
+body#body.light .nav__list a:hover {
+  color: rgb(1, 14, 42);
+}
+body#body.light .nav__btn span {
+  background-color: rgb(1, 14, 42);
+}
+body#body.light .nav__btn.active {
+  border: 1px solid rgb(1, 14, 42);
+}
+body#body.light .nav__mobile {
+  background-color: rgb(255, 255, 255);
+}
+body#body.light .nav__mobile ul a {
+  color: rgba(1, 14, 42, 0.694);
+}
+body#body.light .nav__mobile a.active {
+  color: rgb(1, 14, 42);
+}
+body#body.light .nav__mobile a.active::after {
+  background-color: rgb(1, 14, 42);
+}
+body#body.light .nav__mobile a:hover {
+  color: rgb(1, 14, 42);
+}
+body#body.light .nav__logo, body#body.light .nav__list a, body#body.light .nav__mobile ul a, body#body.light .nav__mobile ul button, body#body.light .nav__list button, body#body.light .nav__btn {
+  outline: 2px dotted transparent;
+  transition: all 0.2s ease;
+  outline-offset: 0;
+}
+body#body.light .nav__logo:focus-visible, body#body.light .nav__list a:focus-visible, body#body.light .nav__btn:focus-visible, body#body.light .nav__mobile button:focus-visible, body#body.light .nav__list button:focus-visible, body#body.light .nav__mobile a:focus-visible {
+  outline: 2px dashed rgb(1, 14, 42);
+  outline-offset: 5px;
+}
+body#body.light .hero h1 {
+  background: rgb(1, 14, 42); /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(1, 14, 42), rgb(255, 255, 255)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  -webkit-animation: gradient 3s linear infinite;
+          animation: gradient 3s linear infinite;
+}
+body#body.light .hero p {
+  color: rgba(1, 14, 42, 0.694);
+}
+body#body.light .hero a {
+  border: 1px solid rgb(1, 14, 42);
+  color: rgb(1, 14, 42);
+}
+body#body.light .hero a svg path {
+  fill: rgb(1, 14, 42);
+  transition: all 0.4s ease;
+}
+body#body.light .hero a:hover,
+body#body.light .hero a:focus-visible {
+  color: rgb(255, 255, 255);
+  border-color: rgb(1, 14, 42);
+  background-color: rgb(1, 14, 42);
+}
+body#body.light .hero a:hover svg path,
+body#body.light .hero a:focus-visible svg path {
+  fill: rgb(255, 255, 255);
+}
+body#body.light .featured-projects h2 {
+  color: rgb(1, 14, 42);
+}
+body#body.light .featured-projects-title span {
+  background-color: rgba(180, 180, 180, 0.926);
+}
+body#body.light .featured-projects__card {
+  border: unset;
+}
+body#body.light .featured-projects__card:focus-visible {
+  outline: 2px dashed rgb(1, 14, 42);
+  outline-offset: 5px;
+}
+body#body.light .featured-projects__card > div {
+  background: linear-gradient(rgba(255, 255, 255, 0.13), rgba(1, 8, 27, 0.798));
+}
+body#body.light .featured-projects__sidebar {
+  background-color: rgb(255, 255, 255);
+}
+body#body.light .featured-projects__sidebar-btn {
+  border-bottom: 1px solid rgba(180, 180, 180, 0.926);
+}
+body#body.light .featured-projects__sidebar-image {
+  box-shadow: 0 14px 28px rgba(1, 5, 14, 0.229), 0 10px 10px rgba(1, 5, 14, 0.229);
+}
+body#body.light .featured-projects__sidebar-btn .back-btn:focus-visible {
+  outline: 2px dashed rgb(1, 14, 42);
+}
+body#body.light .featured-projects__sidebar-btn .back-btn span {
+  color: rgb(1, 14, 42);
+}
+body#body.light .featured-projects__sidebar-btn .back-btn svg path {
+  fill: rgb(1, 14, 42);
+}
+body#body.light .featured-projects__sidebar-title h3 {
+  color: rgb(1, 14, 42);
+}
+body#body.light .featured-projects__sidebar-title span {
+  color: rgba(1, 14, 42, 0.694);
+}
+body#body.light .featured-projects__sidebar-about h4, body#body.light .featured-projects__sidebar-tech h4 {
+  color: rgb(1, 14, 42);
+}
+body#body.light .featured-projects__sidebar-about p {
+  color: rgba(1, 14, 42, 0.694);
+  font-size: 1.8rem;
+}
+body#body.light .featured-projects__sidebar-tech ul li {
+  background-color: rgb(1, 14, 42);
+  color: rgb(255, 255, 255);
+}
+body#body.light .featured-projects__sidebar-links a svg path {
+  fill: rgb(1, 14, 42);
+}
+body#body.light .featured-projects__sidebar-links a span {
+  color: rgb(1, 14, 42);
+}
+body#body.light .featured-projects__sidebar-links a::after {
+  background-color: rgb(1, 14, 42);
+}
+body#body.light .featured-projects__sidebar-links a:focus-visible {
+  outline: 2px dashed rgb(1, 14, 42);
+}
+body#body.light .scroll-top-btn {
+  background-color: rgb(1, 14, 42);
+}
+body#body.light .scroll-top-btn svg path {
+  fill: rgb(255, 255, 255);
+}
+body#body.light .scroll-top-btn:focus-visible {
+  outline: 2px dashed rgb(1, 14, 42);
+}
+body#body.light .about__content p:first-child {
+  color: rgb(1, 14, 42);
+}
+body#body.light .about__content p:nth-child(2), body#body.light .about__content p:last-child {
+  font-weight: 500;
+  color: rgba(1, 14, 42, 0.694);
+}
+body#body.light .skills__container {
+  border: 1px solid rgba(180, 180, 180, 0.926);
+}
+body#body.light .skills ul li {
+  color: rgb(1, 14, 42);
+}
+body#body.light .skills ul li:not(:last-child) {
+  border-right: 1px solid rgba(180, 180, 180, 0.926);
+}
+@media (max-width: 48em) {
+  body#body.light .skills ul li:not(:last-child) {
+    border-right: none;
+  }
+}
+body#body.light .skills__container ul li svg path {
+  fill: rgb(1, 14, 42);
+}
+@media (max-width: 48em) {
+  body#body.light .skills ul li:last-child,
+body#body.light .skills ul li:nth-child(3) {
+    border-top: 1px solid rgba(180, 180, 180, 0.926);
+  }
+}
+@media (max-width: 48em) {
+  body#body.light .skills ul li:last-child::before,
+body#body.light .skills ul li:nth-child(2)::before {
+    background-color: rgba(180, 180, 180, 0.926);
+  }
+}
+body#body.light .projects__nav button {
+  color: rgba(1, 14, 42, 0.694);
+  font-weight: 500;
+}
+body#body.light .projects__nav button:focus-visible {
+  outline: 2px dashed rgb(1, 14, 42);
+}
+body#body.light .projects__nav button.active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(20, 39, 80);
+}
+body#body.light .projects__nav button:hover {
+  color: rgb(1, 14, 42);
+}
+body#body.light .projects__nav button.active:hover {
+  color: rgb(255, 255, 255);
+}
+body#body.light .projects__card {
+  border: unset;
+}
+body#body.light .projects__card:focus-visible {
+  outline: 2px dashed rgb(1, 14, 42);
+  outline-offset: 5px;
+}
+body#body.light .projects__card > div {
+  background: linear-gradient(rgba(255, 255, 255, 0.13), rgba(1, 8, 27, 0.798));
+}
+body#body.light .projects__sidebar {
+  background-color: rgb(255, 255, 255);
+}
+body#body.light .projects__sidebar-btn {
+  border-bottom: 1px solid rgba(180, 180, 180, 0.926);
+}
+body#body.light .projects__sidebar-btn .back-btn:focus-visible {
+  outline: 2px dashed rgb(1, 14, 42);
+  outline-offset: 5px;
+}
+body#body.light .projects__sidebar-btn .back-btn svg path {
+  fill: rgb(1, 14, 42);
+}
+body#body.light .projects__sidebar-btn .back-btn span {
+  font-weight: 500;
+  color: rgb(1, 14, 42);
+}
+body#body.light .projects__sidebar-title h3 {
+  color: rgb(1, 14, 42);
+}
+body#body.light .projects__sidebar-title span {
+  font-weight: 500;
+  color: rgba(1, 14, 42, 0.694);
+}
+body#body.light .projects__sidebar-image {
+  box-shadow: 0 14px 28px rgba(1, 5, 14, 0.229), 0 10px 10px rgba(1, 5, 14, 0.229);
+}
+body#body.light .projects__sidebar-about h4, body#body.light .projects__sidebar-tech h4 {
+  color: rgb(1, 14, 42);
+}
+body#body.light .projects__sidebar-about p {
+  color: rgba(1, 14, 42, 0.694);
+  font-weight: 500;
+}
+body#body.light .projects__sidebar-tech ul li {
+  background-color: rgb(1, 14, 42);
+  color: rgb(255, 255, 255);
+}
+body#body.light .projects__sidebar-links a svg path {
+  fill: rgb(1, 14, 42);
+}
+body#body.light .projects__sidebar-links a span {
+  color: rgb(1, 14, 42);
+}
+body#body.light .projects__sidebar-links a::after {
+  background-color: rgb(1, 14, 42);
+}
+body#body.light .projects__sidebar-links a:focus-visible {
+  outline: 2px dashed rgb(1, 14, 42);
+}
+body#body.light .contact__input-group input::-moz-placeholder, body#body.light .contact__input-group textarea::-moz-placeholder {
+  color: rgba(1, 14, 42, 0.694);
+}
+body#body.light .contact__input-group input:-ms-input-placeholder, body#body.light .contact__input-group textarea:-ms-input-placeholder {
+  color: rgba(1, 14, 42, 0.694);
+}
+body#body.light .contact__input-group input::placeholder, body#body.light .contact__input-group textarea::placeholder {
+  color: rgba(1, 14, 42, 0.694);
+}
+body#body.light .contact__input-group input, body#body.light .contact__input-group textarea {
+  border-color: rgba(1, 14, 42, 0.694);
+  color: rgb(1, 14, 42);
+}
+body#body.light .contact__input-group input:hover, body#body.light .contact__input-group textarea:hover {
+  outline: 1px solid rgb(1, 14, 42);
+}
+body#body.light .contact__input-group input:focus, body#body.light .contact__input-group input:focus-visible, body#body.light .contact__input-group textarea:focus, body#body.light .contact__input-group textarea:focus-visible {
+  border-color: rgb(1, 14, 42);
+  background-color: rgb(255, 255, 255);
+  outline: 1px solid rgb(1, 14, 42);
+}
+body#body.light .contact__input-group input.error, body#body.light .contact__input-group textarea.error {
+  outline: none;
+  border-color: rgb(224, 28, 28);
+}
+body#body.light .contact__btn {
+  color: rgb(255, 255, 255);
+  background-color: rgb(1, 14, 42);
+}
+body#body.light .contact__btn:hover {
+  box-shadow: 0 3px 8px rgba(30, 30, 30, 0.245), 0 10px 10px rgba(21, 21, 21, 0.283);
+}
+body#body.light .contact__btn svg path {
+  fill: rgb(255, 255, 255);
+}
+body#body.light .contact__btn:focus-visible {
+  transform: scale(1.03);
+  box-shadow: 0 3px 8px rgba(42, 42, 42, 0.103), 0 10px 10px rgba(29, 29, 29, 0.134);
+  outline: 2px dotted rgb(1, 14, 42);
+}
+body#body.light .contact__input-group span.error {
+  border-color: rgb(224, 28, 28);
+  font-weight: 400;
+}
+body#body.light .footer {
+  background-color: rgb(255, 255, 255);
+  border-top: 1px solid rgba(180, 180, 180, 0.926);
+}
+body#body.light .footer p {
+  color: rgb(1, 14, 42);
+}
+body#body.light .footer ul a:focus-visible {
+  outline: 2px dashed rgb(1, 14, 42);
+}
+body#body.light .footer ul a svg path {
+  fill: rgb(1, 14, 42);
 }

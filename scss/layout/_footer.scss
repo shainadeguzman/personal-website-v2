@@ -49,13 +49,12 @@
     outline-offset: 5px;
   }
 
-  ul a img {
-    width: 2.5rem;
-    padding: 0.2rem;
+  ul a svg {
+    width: 2.7rem;
   }
 
   ul li:not(:last-child) {
-    margin-right: 3.2rem;
+    margin-right: 3.8rem;
 
     @include respond-to(sm) {
       margin-right: 5rem;

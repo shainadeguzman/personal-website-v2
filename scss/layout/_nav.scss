@@ -1,12 +1,13 @@
 .nav {
   border-bottom: 1px solid $color-light-border;
+  background-color: $color-dark-blue;
   height: 9rem;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  transition: top 0.4s ease;
   z-index: 5;
+  transition: top 0.4s ease, background-color 0.3s ease;
 
   &__container {
     height: 100%;
@@ -34,7 +35,7 @@
   }
 
   &__list li:not(:last-child) {
-    margin-right: 7rem;
+    margin-right: 5.5rem;
   }
 
   &__list a {
@@ -42,7 +43,7 @@
     color: $color-light-secondary;
     text-transform: uppercase;
     transition: color 0.4s ease;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.8rem;
     position: relative;
   }
@@ -73,8 +74,34 @@
     transform: translateX(-50%);
   }
 
+  &__list li:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__list a:hover {
     color: $color-light;
+  }
+
+  &__list button {
+    background-color: transparent;
+    margin-left: 0.2rem;
+    cursor: pointer;
+    border: none;
+    transition: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__list button svg {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  &__list button.active svg path {
+    fill: $color-dark-blue;
   }
 
   &__btn {
@@ -179,6 +206,32 @@
     margin-bottom: 4rem;
   }
 
+  &__mobile li:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__mobile button {
+    background-color: transparent;
+    margin-top: 4rem;
+    cursor: pointer;
+    border: none;
+    transition: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__mobile button svg {
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+
+  &__mobile button.active svg path {
+    fill: $color-dark-blue;
+  }
+
   &__mobile ul a {
     text-decoration: none;
     color: $color-light-secondary;
@@ -189,7 +242,12 @@
     display: none;
   }
 
-  &__mobile.active a {
+  &__mobile ul button {
+    display: none;
+  }
+
+  &__mobile.active a,
+  &__mobile.active ul button {
     display: unset;
   }
 
@@ -233,7 +291,9 @@
   &__logo,
   &__list a,
   &__mobile ul a,
-  &__btn {
+  &__mobile ul button,
+  &__btn,
+  &__list button {
     outline: 2px dotted transparent;
     transition: all 0.2s ease;
     outline-offset: 0;
@@ -242,7 +302,9 @@
   &__logo:focus-visible,
   &__list a:focus-visible,
   &__btn:focus-visible,
-  &__mobile a:focus-visible {
+  &__mobile a:focus-visible,
+  &__mobile button:focus-visible,
+  &__list button:focus-visible {
     outline: 2px dashed $color-light;
     outline-offset: 5px;
   }

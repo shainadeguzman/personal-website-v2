@@ -64,7 +64,7 @@
     }
   }
 
-  ul li img {
+  ul li svg {
     width: 6.5rem;
     margin-top: 1.2rem;
     display: block;
@@ -107,7 +107,7 @@
     }
   }
 
-  ul li:hover img,
+  ul li:hover svg,
   ul li:hover span {
     transform: translateY(-1rem);
   }

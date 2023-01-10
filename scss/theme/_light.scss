@@ -1,0 +1,484 @@
+body#body.light {
+  background: unset;
+  background: $color-light;
+  background-repeat: unset;
+  background-size: unset;
+
+  //   UTILITITES
+  .section-title h1 {
+    color: $color-dark-blue;
+    animation: unset;
+  }
+
+  .section-title p {
+    color: $color-dark-blue-secondary;
+  }
+
+  .section-title p b {
+    color: $color-dark-blue;
+  }
+
+  .section-subtitle h2 {
+    color: $color-dark-blue;
+  }
+
+  .nav {
+    border-bottom: 1px solid $color-light-border-secondary;
+    background-color: $color-light;
+
+    &__logo {
+      color: $color-dark-blue;
+    }
+
+    &__list a {
+      text-decoration: none;
+      color: $color-dark-blue-secondary;
+    }
+
+    &__list a.active {
+      color: $color-dark-blue;
+    }
+
+    &__list a.active::after {
+      background-color: $color-dark-blue;
+    }
+
+    &__list a:hover {
+      color: $color-dark-blue;
+    }
+
+    &__btn span {
+      background-color: $color-dark-blue;
+    }
+
+    &__btn.active {
+      border: 1px solid $color-dark-blue;
+    }
+
+    &__mobile {
+      background-color: $color-light;
+    }
+
+    &__mobile ul a {
+      color: $color-dark-blue-secondary;
+    }
+
+    &__mobile a.active {
+      color: $color-dark-blue;
+    }
+
+    &__mobile a.active::after {
+      background-color: $color-dark-blue;
+    }
+
+    &__mobile a:hover {
+      color: $color-dark-blue;
+    }
+
+    &__logo,
+    &__list a,
+    &__mobile ul a,
+    &__mobile ul button,
+    &__list button,
+    &__btn {
+      outline: 2px dotted transparent;
+      transition: all 0.2s ease;
+      outline-offset: 0;
+    }
+
+    &__logo:focus-visible,
+    &__list a:focus-visible,
+    &__btn:focus-visible,
+    &__mobile button:focus-visible,
+    &__list button:focus-visible,
+    &__mobile a:focus-visible {
+      outline: 2px dashed $color-dark-blue;
+      outline-offset: 5px;
+    }
+  }
+
+  .hero {
+    h1 {
+      background: $color-dark-blue; /* fallback for old browsers */
+      background: -webkit-linear-gradient(
+        to right,
+        $color-light,
+        $color-dark-blue,
+        $color-light
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        to right,
+        $color-light,
+        $color-dark-blue,
+        $color-light
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-size: 200% auto;
+      animation: gradient 3s linear infinite;
+    }
+
+    p {
+      color: $color-dark-blue-secondary;
+    }
+
+    a {
+      border: 1px solid $color-dark-blue;
+      color: $color-dark-blue;
+    }
+
+    a svg path {
+      fill: $color-dark-blue;
+      transition: all 0.4s ease;
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: $color-light;
+      border-color: $color-dark-blue;
+      background-color: $color-dark-blue;
+    }
+
+    a:hover,
+    a:focus-visible {
+      svg path {
+        fill: $color-light;
+      }
+    }
+  }
+
+  .featured-projects {
+    h2 {
+      color: $color-dark-blue;
+    }
+
+    &-title span {
+      background-color: $color-light-border-secondary;
+    }
+
+    &__card {
+      border: unset;
+    }
+
+    &__card:focus-visible {
+      outline: 2px dashed $color-dark-blue;
+      outline-offset: 5px;
+    }
+
+    &__card > div {
+      background: linear-gradient(
+        rgb(255 255 255 / 13%),
+        rgba(1, 8, 27, 0.798)
+      );
+    }
+
+    &__sidebar {
+      background-color: $color-light;
+    }
+
+    &__sidebar-btn {
+      border-bottom: 1px solid $color-light-border-secondary;
+    }
+
+    &__sidebar-image {
+      box-shadow: 0 14px 28px rgba(1, 5, 14, 0.229),
+        0 10px 10px rgba(1, 5, 14, 0.229);
+    }
+
+    &__sidebar-btn .back-btn:focus-visible {
+      outline: 2px dashed $color-dark-blue;
+    }
+
+    &__sidebar-btn .back-btn span {
+      color: $color-dark-blue;
+    }
+
+    &__sidebar-btn .back-btn svg path {
+      fill: $color-dark-blue;
+    }
+
+    &__sidebar-title h3 {
+      color: $color-dark-blue;
+    }
+
+    &__sidebar-title span {
+      color: $color-dark-blue-secondary;
+    }
+
+    &__sidebar-about h4,
+    &__sidebar-tech h4 {
+      color: $color-dark-blue;
+    }
+
+    &__sidebar-about p {
+      color: $color-dark-blue-secondary;
+      font-size: 1.8rem;
+    }
+
+    &__sidebar-tech ul li {
+      background-color: $color-dark-blue;
+      color: $color-light;
+    }
+
+    &__sidebar-links a svg path {
+      fill: $color-dark-blue;
+    }
+
+    &__sidebar-links a span {
+      color: $color-dark-blue;
+    }
+
+    &__sidebar-links a::after {
+      background-color: $color-dark-blue;
+    }
+
+    &__sidebar-links a:focus-visible {
+      outline: 2px dashed $color-dark-blue;
+    }
+  }
+
+  .scroll-top-btn {
+    background-color: $color-dark-blue;
+
+    svg path {
+      fill: $color-light;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed $color-dark-blue;
+    }
+  }
+
+  .about {
+    &__content p:first-child {
+      color: $color-dark-blue;
+    }
+
+    &__content p:nth-child(2),
+    &__content p:last-child {
+      font-weight: 500;
+      color: $color-dark-blue-secondary;
+    }
+  }
+
+  .skills {
+    &__container {
+      border: 1px solid $color-light-border-secondary;
+    }
+
+    ul li {
+      color: $color-dark-blue;
+    }
+
+    ul li:not(:last-child) {
+      border-right: 1px solid $color-light-border-secondary;
+
+      @include respond-to(md) {
+        border-right: none;
+      }
+    }
+
+    &__container ul li svg path {
+      fill: $color-dark-blue;
+    }
+
+    ul li:last-child,
+    ul li:nth-child(3) {
+      @include respond-to(md) {
+        border-top: 1px solid $color-light-border-secondary;
+      }
+    }
+
+    ul li:last-child::before,
+    ul li:nth-child(2)::before {
+      @include respond-to(md) {
+        background-color: $color-light-border-secondary;
+      }
+    }
+  }
+
+  .projects {
+    &__nav button {
+      color: $color-dark-blue-secondary;
+      font-weight: 500;
+    }
+
+    &__nav button:focus-visible {
+      outline: 2px dashed $color-dark-blue;
+    }
+
+    &__nav button.active {
+      color: $color-light;
+      background-color: $color-light-blue;
+    }
+
+    &__nav button:hover {
+      color: $color-dark-blue;
+    }
+
+    &__nav button.active:hover {
+      color: $color-light;
+    }
+
+    &__card {
+      border: unset;
+    }
+
+    &__card:focus-visible {
+      outline: 2px dashed $color-dark-blue;
+      outline-offset: 5px;
+    }
+
+    &__card > div {
+      background: linear-gradient(
+        rgb(255 255 255 / 13%),
+        rgba(1, 8, 27, 0.798)
+      );
+    }
+
+    &__sidebar {
+      background-color: $color-light;
+    }
+
+    &__sidebar-btn {
+      border-bottom: 1px solid $color-light-border-secondary;
+    }
+
+    &__sidebar-btn .back-btn:focus-visible {
+      outline: 2px dashed $color-dark-blue;
+      outline-offset: 5px;
+    }
+
+    &__sidebar-btn .back-btn svg path {
+      fill: $color-dark-blue;
+    }
+
+    &__sidebar-btn .back-btn span {
+      font-weight: 500;
+      color: $color-dark-blue;
+    }
+
+    &__sidebar-title h3 {
+      color: $color-dark-blue;
+    }
+
+    &__sidebar-title span {
+      font-weight: 500;
+      color: $color-dark-blue-secondary;
+    }
+
+    &__sidebar-image {
+      box-shadow: 0 14px 28px rgba(1, 5, 14, 0.229),
+        0 10px 10px rgba(1, 5, 14, 0.229);
+    }
+
+    &__sidebar-about h4,
+    &__sidebar-tech h4 {
+      color: $color-dark-blue;
+    }
+
+    &__sidebar-about p {
+      color: $color-dark-blue-secondary;
+      font-weight: 500;
+    }
+
+    &__sidebar-tech ul li {
+      background-color: $color-dark-blue;
+      color: $color-light;
+    }
+
+    &__sidebar-links a svg path {
+      fill: $color-dark-blue;
+    }
+
+    &__sidebar-links a span {
+      color: $color-dark-blue;
+    }
+
+    &__sidebar-links a::after {
+      background-color: $color-dark-blue;
+    }
+
+    &__sidebar-links a:focus-visible {
+      outline: 2px dashed $color-dark-blue;
+    }
+  }
+
+  .contact {
+    &__input-group input::placeholder,
+    &__input-group textarea::placeholder {
+      color: $color-dark-blue-secondary;
+    }
+
+    &__input-group input,
+    &__input-group textarea {
+      border-color: $color-dark-blue-secondary;
+      color: $color-dark-blue;
+    }
+
+    &__input-group input:hover,
+    &__input-group textarea:hover {
+      outline: 1px solid $color-dark-blue;
+    }
+
+    &__input-group input:focus,
+    &__input-group input:focus-visible,
+    &__input-group textarea:focus,
+    &__input-group textarea:focus-visible {
+      border-color: $color-dark-blue;
+      background-color: $color-light;
+      outline: 1px solid $color-dark-blue;
+    }
+
+    &__input-group input.error,
+    &__input-group textarea.error {
+      outline: none;
+      border-color: rgb(224, 28, 28);
+    }
+
+    &__btn {
+      color: $color-light;
+      background-color: $color-dark-blue;
+    }
+
+    &__btn:hover {
+      box-shadow: 0 3px 8px rgba(30, 30, 30, 0.245),
+        0 10px 10px rgba(21, 21, 21, 0.283);
+    }
+
+    &__btn svg path {
+      fill: $color-light;
+    }
+
+    &__btn:focus-visible {
+      transform: scale(1.03);
+      box-shadow: 0 3px 8px rgba(42, 42, 42, 0.103),
+        0 10px 10px rgba(29, 29, 29, 0.134);
+      outline: 2px dotted $color-dark-blue;
+    }
+
+    &__input-group span.error {
+      border-color: rgb(224, 28, 28);
+      font-weight: 400;
+    }
+  }
+
+  .footer {
+    background-color: $color-light;
+    border-top: 1px solid $color-light-border-secondary;
+
+    p {
+      color: $color-dark-blue;
+    }
+
+    ul a:focus-visible {
+      outline: 2px dashed $color-dark-blue;
+    }
+
+    ul a svg path {
+      fill: $color-dark-blue;
+    }
+  }
+}

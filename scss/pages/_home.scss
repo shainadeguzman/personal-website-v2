@@ -62,7 +62,7 @@
 
   p {
     font-size: 2.2rem;
-    font-weight: 400;
+    font-weight: 500;
     color: $color-light-secondary;
   }
 
@@ -173,7 +173,7 @@
     border: 1px solid rgba(255, 255, 255, 0.118);
 
     @include respond-to(sm) {
-      height: 28rem;
+      height: 32rem;
     }
   }
 
@@ -213,7 +213,7 @@
 
   &__card > div {
     // background: rgba(1, 9, 27, 0.731);
-    background: linear-gradient(rgba(1, 9, 27, 0.128), rgba(1, 8, 27, 0.955));
+    background: linear-gradient(rgb(255 255 255 / 13%), rgba(1, 8, 27, 0.798));
     position: absolute;
     top: 0;
     bottom: 0;
@@ -254,10 +254,11 @@
     text-align: center;
     display: block;
     font-size: 1.6rem;
-    font-weight: 300;
+    font-weight: 400;
     opacity: 0.8;
     transform: translateY(-3rem);
     transition: all 0.4s ease;
+    color: $color-light-blue;
 
     @include respond-to(sm) {
       transform: translateY(-2rem);
@@ -429,13 +430,13 @@
     display: flex;
   }
 
-  &__sidebar-btn .back-btn img {
+  &__sidebar-btn .back-btn svg {
     width: 2.2rem;
     pointer-events: none;
   }
 
   &__sidebar-btn .back-btn span {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 2rem;
     color: $color-light;
     text-transform: capitalize;
@@ -455,7 +456,7 @@
 
   &__sidebar-title span {
     display: block;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.6rem;
     color: $color-light-secondary;
     text-align: left;
@@ -465,11 +466,11 @@
   &__sidebar-image {
     margin-top: 2rem;
     width: 100%;
-    height: 26rem;
+    height: 30rem;
     border-radius: 20px;
 
     @include respond-to(sm) {
-      height: 18rem;
+      height: 22rem;
     }
   }
 
@@ -498,6 +499,7 @@
   &__sidebar-about p {
     color: $color-light-secondary;
     font-size: 1.8rem;
+    font-weight: 500;
   }
 
   &__sidebar-tech ul {
@@ -569,7 +571,7 @@
     text-transform: lowercase;
   }
 
-  &__sidebar-links a img {
+  &__sidebar-links a svg {
     width: 2rem;
   }
 

@@ -20,7 +20,11 @@ formInputs.forEach((input) =>
     if (input.value == "" || input.value == null) {
       input.style.backgroundColor = "transparent";
     } else {
-      input.style.backgroundColor = "rgba(1, 14, 42, 1)";
+      if (document.body.classList.contains("dark")) {
+        input.style.backgroundColor = "rgba(255, 255, 255, 1)";
+      } else {
+        input.style.backgroundColor = "rgba(1, 14, 42, 1)";
+      }
     }
   })
 );
