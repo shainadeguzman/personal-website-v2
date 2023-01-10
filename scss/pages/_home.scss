@@ -170,9 +170,10 @@
     box-shadow: 0 14px 28px rgba(1, 5, 14, 0.229),
       0 10px 10px rgba(1, 5, 14, 0.229);
     transition: outline-offset 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.118);
 
     @include respond-to(sm) {
-      height: 26rem;
+      height: 28rem;
     }
   }
 
@@ -211,7 +212,8 @@
   }
 
   &__card > div {
-    background: rgba(1, 9, 27, 0.731);
+    // background: rgba(1, 9, 27, 0.731);
+    background: linear-gradient(rgba(1, 9, 27, 0.128), rgba(1, 8, 27, 0.955));
     position: absolute;
     top: 0;
     bottom: 0;
@@ -457,16 +459,17 @@
     font-size: 1.6rem;
     color: $color-light-secondary;
     text-align: left;
+    text-transform: capitalize;
   }
 
   &__sidebar-image {
     margin-top: 2rem;
     width: 100%;
-    height: 24rem;
+    height: 26rem;
     border-radius: 20px;
 
     @include respond-to(sm) {
-      height: 17rem;
+      height: 18rem;
     }
   }
 

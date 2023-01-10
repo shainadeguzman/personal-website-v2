@@ -80,6 +80,10 @@
   }
 }
 
+.section-title p b {
+  color: $color-light;
+}
+
 ul li.uppercase {
   text-transform: uppercase;
 }

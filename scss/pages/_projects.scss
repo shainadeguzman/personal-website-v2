@@ -79,9 +79,10 @@
     outline: 2px dotted transparent;
     transition: outline-offset 0.2s ease;
     outline-offset: 0;
+    border: 1px solid rgba(255, 255, 255, 0.118);
 
     @include respond-to(sm) {
-      height: 26rem;
+      height: 28rem;
     }
   }
 
@@ -90,8 +91,8 @@
     outline-offset: 5px;
   }
 
-  &__card.side-projects,
-  &__card.practice-projects,
+  &__card.project,
+  &__card.design,
   &__card.all-projects {
     transform: scale(0.9);
     opacity: 0;
@@ -99,8 +100,8 @@
     animation: fade-in 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
-  &__card.side-projects.active,
-  &__card.practice-projects.active,
+  &__card.project.active,
+  &__card.design.active,
   &__card.all-projects.active {
     transform: scale(1);
     opacity: 1;
@@ -153,7 +154,8 @@
   }
 
   &__card > div {
-    background: rgba(1, 9, 27, 0.731);
+    // background: rgba(1, 9, 27, 0.731);
+    background: linear-gradient(rgba(1, 9, 27, 0.128), rgba(1, 8, 27, 0.955));
     position: absolute;
     top: 0;
     bottom: 0;
@@ -271,6 +273,7 @@
     color: $color-light-secondary;
     text-align: left;
     margin-bottom: 2rem;
+    text-transform: capitalize;
   }
 
   &__card-info ul {
@@ -397,15 +400,17 @@
     font-size: 1.6rem;
     color: $color-light-secondary;
     text-align: left;
+    text-transform: capitalize;
   }
 
   &__sidebar-image {
     margin-top: 2rem;
-    height: 24rem;
+    height: 28rem;
     border-radius: 20px;
+    width: 95%;
 
     @include respond-to(sm) {
-      height: 17rem;
+      height: 18rem;
     }
   }
 

@@ -12,6 +12,7 @@ projectsFilterNav.addEventListener("click", function (e) {
     projectsFilterNav.querySelector(`.${targetBtn}`).classList.add("active");
     document.querySelectorAll(".projects__card").forEach((card) => {
       if (targetBtn === card.classList[1]) {
+        console.log(targetBtn);
         card.classList.add("active");
       } else if (targetBtn === "all-projects") {
         card.classList.add("active");
