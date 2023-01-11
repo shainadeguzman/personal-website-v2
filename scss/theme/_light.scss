@@ -169,8 +169,8 @@ body#body.light {
 
     &__card > div {
       background: linear-gradient(
-        rgb(255 255 255 / 13%),
-        rgba(1, 8, 27, 0.798)
+        rgba(1, 14, 42, 0.092) 10%,
+        rgba(1, 14, 42, 0.768) 80%
       );
     }
 
@@ -180,11 +180,6 @@ body#body.light {
 
     &__sidebar-btn {
       border-bottom: 1px solid $color-light-border-secondary;
-    }
-
-    &__sidebar-image {
-      box-shadow: 0 14px 28px rgba(1, 5, 14, 0.229),
-        0 10px 10px rgba(1, 5, 14, 0.229);
     }
 
     &__sidebar-btn .back-btn:focus-visible {
@@ -333,8 +328,8 @@ body#body.light {
 
     &__card > div {
       background: linear-gradient(
-        rgb(255 255 255 / 13%),
-        rgba(1, 8, 27, 0.798)
+        rgba(1, 14, 42, 0.092) 10%,
+        rgba(1, 14, 42, 0.768) 80%
       );
     }
 
@@ -367,11 +362,6 @@ body#body.light {
     &__sidebar-title span {
       font-weight: 500;
       color: $color-dark-blue-secondary;
-    }
-
-    &__sidebar-image {
-      box-shadow: 0 14px 28px rgba(1, 5, 14, 0.229),
-        0 10px 10px rgba(1, 5, 14, 0.229);
     }
 
     &__sidebar-about h4,

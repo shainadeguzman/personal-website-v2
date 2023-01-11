@@ -140,22 +140,24 @@
 
   &__card:hover img,
   &__card:focus-visible img {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 
   &__card img {
     @include respond-to(lg) {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
 
     @include respond-to(sm) {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
   }
 
   &__card > div {
-    // background: rgba(1, 9, 27, 0.731);
-    background: linear-gradient(rgb(255 255 255 / 13%), rgba(1, 8, 27, 0.798));
+    background: linear-gradient(
+      rgba(1, 14, 42, 0.092) 10%,
+      rgba(1, 14, 42, 0.768) 80%
+    );
     position: absolute;
     top: 0;
     bottom: 0;
@@ -526,6 +528,14 @@
     bottom: 0;
     left: 0;
     transition: width 0.4s ease;
+
+    @include respond-to(lg) {
+      width: 100%;
+    }
+
+    @include respond-to(md) {
+      width: 100%;
+    }
   }
 
   &__sidebar-links a:hover::after,

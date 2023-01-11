@@ -680,20 +680,20 @@ ul li.capitalize {
   pointer-events: none;
 }
 .featured-projects__card:hover img, .featured-projects__card:focus-visible img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 @media (max-width: 62em) {
   .featured-projects__card img {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 }
 @media (max-width: 36em) {
   .featured-projects__card img {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 }
 .featured-projects__card > div {
-  background: linear-gradient(rgba(255, 255, 255, 0.13), rgba(1, 8, 27, 0.798));
+  background: linear-gradient(rgba(1, 14, 42, 0.092) 10%, rgba(1, 14, 42, 0.768) 80%);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1032,6 +1032,16 @@ ul li.capitalize {
   left: 0;
   transition: width 0.4s ease;
 }
+@media (max-width: 62em) {
+  .featured-projects__sidebar-links a::after {
+    width: 100%;
+  }
+}
+@media (max-width: 48em) {
+  .featured-projects__sidebar-links a::after {
+    width: 100%;
+  }
+}
 .featured-projects__sidebar-links a:hover::after, .featured-projects__sidebar-links a:focus-visible::after {
   width: 100%;
 }
@@ -1304,20 +1314,20 @@ ul li.capitalize {
   pointer-events: none;
 }
 .projects__card:hover img, .projects__card:focus-visible img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 @media (max-width: 62em) {
   .projects__card img {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 }
 @media (max-width: 36em) {
   .projects__card img {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 }
 .projects__card > div {
-  background: linear-gradient(rgba(255, 255, 255, 0.13), rgba(1, 8, 27, 0.798));
+  background: linear-gradient(rgba(1, 14, 42, 0.092) 10%, rgba(1, 14, 42, 0.768) 80%);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1657,6 +1667,16 @@ ul li.capitalize {
   left: 0;
   transition: width 0.4s ease;
 }
+@media (max-width: 62em) {
+  .projects__sidebar-links a::after {
+    width: 100%;
+  }
+}
+@media (max-width: 48em) {
+  .projects__sidebar-links a::after {
+    width: 100%;
+  }
+}
 .projects__sidebar-links a:hover::after, .projects__sidebar-links a:focus-visible::after {
   width: 100%;
 }
@@ -1904,16 +1924,13 @@ body#body.light .featured-projects__card:focus-visible {
   outline-offset: 5px;
 }
 body#body.light .featured-projects__card > div {
-  background: linear-gradient(rgba(255, 255, 255, 0.13), rgba(1, 8, 27, 0.798));
+  background: linear-gradient(rgba(1, 14, 42, 0.092) 10%, rgba(1, 14, 42, 0.768) 80%);
 }
 body#body.light .featured-projects__sidebar {
   background-color: rgb(255, 255, 255);
 }
 body#body.light .featured-projects__sidebar-btn {
   border-bottom: 1px solid rgba(180, 180, 180, 0.926);
-}
-body#body.light .featured-projects__sidebar-image {
-  box-shadow: 0 14px 28px rgba(1, 5, 14, 0.229), 0 10px 10px rgba(1, 5, 14, 0.229);
 }
 body#body.light .featured-projects__sidebar-btn .back-btn:focus-visible {
   outline: 2px dashed rgb(1, 14, 42);
@@ -2023,7 +2040,7 @@ body#body.light .projects__card:focus-visible {
   outline-offset: 5px;
 }
 body#body.light .projects__card > div {
-  background: linear-gradient(rgba(255, 255, 255, 0.13), rgba(1, 8, 27, 0.798));
+  background: linear-gradient(rgba(1, 14, 42, 0.092) 10%, rgba(1, 14, 42, 0.768) 80%);
 }
 body#body.light .projects__sidebar {
   background-color: rgb(255, 255, 255);
@@ -2048,9 +2065,6 @@ body#body.light .projects__sidebar-title h3 {
 body#body.light .projects__sidebar-title span {
   font-weight: 500;
   color: rgba(1, 14, 42, 0.694);
-}
-body#body.light .projects__sidebar-image {
-  box-shadow: 0 14px 28px rgba(1, 5, 14, 0.229), 0 10px 10px rgba(1, 5, 14, 0.229);
 }
 body#body.light .projects__sidebar-about h4, body#body.light .projects__sidebar-tech h4 {
   color: rgb(1, 14, 42);
