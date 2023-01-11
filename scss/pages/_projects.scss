@@ -411,13 +411,8 @@
 
   &__sidebar-image {
     margin-top: 2rem;
-    height: 30rem;
     border-radius: 20px;
     width: 95%;
-
-    @include respond-to(sm) {
-      height: 22rem;
-    }
   }
 
   &__sidebar-image img {
