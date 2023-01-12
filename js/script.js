@@ -15,6 +15,7 @@ const toggleThememMobileBtn = document.getElementById("toggle-theme-mobile");
 
 if (!localStorage.getItem("theme")) {
   localStorage.setItem("theme", "dark");
+  document.getElementById("body").classList = "dark";
 } else {
   if (localStorage.getItem("theme") === "dark") {
     document.getElementById("body").classList = "dark";
