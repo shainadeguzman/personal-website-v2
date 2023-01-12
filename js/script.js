@@ -12,6 +12,7 @@ const mobileNavOverlay = document.querySelector(".nav__mobile-overlay");
 const tabIndexElements = document.querySelectorAll(".tabIndxs");
 const toggleThemeBtn = document.getElementById("toggle-theme");
 const toggleThememMobileBtn = document.getElementById("toggle-theme-mobile");
+const formInputs = document.querySelectorAll(".input");
 
 if (!localStorage.getItem("theme")) {
   localStorage.setItem("theme", "dark");

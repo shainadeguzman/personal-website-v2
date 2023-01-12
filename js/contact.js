@@ -1,5 +1,4 @@
 const contactForm = document.querySelector(".contact__form");
-const formInputs = document.querySelectorAll(".input");
 const formFullName = document.querySelector(".full-name");
 const formEmail = document.querySelector(".email");
 const formMessage = document.querySelector(".msg");
