@@ -24,15 +24,6 @@
     width: calc(100% - 33px);
   }
 
-  &__input-group input::placeholder,
-  &__input-group textarea::placeholder {
-    color: $color-light-secondary;
-    font-weight: 400;
-    font-family: "Manrope", sans-serif;
-    text-transform: capitalize;
-    transition: transform 0.2s ease;
-  }
-
   &__input-group input,
   &__input-group textarea {
     background-color: transparent;
@@ -46,6 +37,16 @@
     border-width: 1px;
     font-family: "Manrope", sans-serif;
     transition: outline 0.4s ease;
+  }
+
+  &__input-group input::placeholder,
+  &__input-group textarea::placeholder {
+    font-weight: 500;
+    color: $color-light-secondary;
+    font-weight: 400;
+    font-family: "Manrope", sans-serif;
+    text-transform: capitalize;
+    transition: transform 0.2s ease;
   }
 
   &__input-group input:hover,

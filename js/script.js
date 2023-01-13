@@ -43,18 +43,12 @@ const toggleTheme = function () {
     toggleThemeBtn.classList.remove("active");
     toggleThememMobileBtn.classList.remove("active");
     navBar.style.background = "rgba(1, 14, 42, 1)";
-    formInputs.forEach(
-      (input) => (input.style.backgroundColor = "rgba(1, 14, 42, 1)")
-    );
   } else if (document.getElementById("body").classList.contains("dark")) {
     document.getElementById("body").classList = "light";
     localStorage.setItem("theme", "light");
     toggleThemeBtn.classList.add("active");
     toggleThememMobileBtn.classList.add("active");
     navBar.style.background = "rgba(255, 255, 255, 1)";
-    formInputs.forEach(
-      (input) => (input.style.backgroundColor = "rgba(255, 255, 255, 1)")
-    );
   }
 };
 

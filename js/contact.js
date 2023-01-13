@@ -13,21 +13,6 @@ const formShowError = function (param) {
   }, 3000);
 };
 
-// REMOVE BACKGROUND COLOR IF USER LEAVES INPUT ELEMENT EMPTY
-formInputs.forEach((input) =>
-  input.addEventListener("blur", function () {
-    if (input.value == "" || input.value == null) {
-      input.style.backgroundColor = "transparent";
-    } else {
-      if (document.body.classList.contains("light")) {
-        input.style.backgroundColor = "rgba(255, 255, 255, 1)";
-      } else {
-        input.style.backgroundColor = "rgba(1, 14, 42, 1)";
-      }
-    }
-  })
-);
-
 // FORM VALIDATION
 contactForm.addEventListener("submit", function (e) {
   if (formFullName.value === "" || formFullName.value == null) {

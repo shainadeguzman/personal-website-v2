@@ -1696,29 +1696,6 @@ ul li.capitalize {
   height: 12rem;
   width: calc(100% - 33px);
 }
-.contact__input-group input::-moz-placeholder, .contact__input-group textarea::-moz-placeholder {
-  color: rgb(197, 196, 199);
-  font-weight: 400;
-  font-family: "Manrope", sans-serif;
-  text-transform: capitalize;
-  -moz-transition: transform 0.2s ease;
-  transition: transform 0.2s ease;
-}
-.contact__input-group input:-ms-input-placeholder, .contact__input-group textarea:-ms-input-placeholder {
-  color: rgb(197, 196, 199);
-  font-weight: 400;
-  font-family: "Manrope", sans-serif;
-  text-transform: capitalize;
-  -ms-transition: transform 0.2s ease;
-  transition: transform 0.2s ease;
-}
-.contact__input-group input::placeholder, .contact__input-group textarea::placeholder {
-  color: rgb(197, 196, 199);
-  font-weight: 400;
-  font-family: "Manrope", sans-serif;
-  text-transform: capitalize;
-  transition: transform 0.2s ease;
-}
 .contact__input-group input, .contact__input-group textarea {
   background-color: transparent;
   border-radius: 10px;
@@ -1731,6 +1708,32 @@ ul li.capitalize {
   border-width: 1px;
   font-family: "Manrope", sans-serif;
   transition: outline 0.4s ease;
+}
+.contact__input-group input::-moz-placeholder, .contact__input-group textarea::-moz-placeholder {
+  font-weight: 500;
+  color: rgb(197, 196, 199);
+  font-weight: 400;
+  font-family: "Manrope", sans-serif;
+  text-transform: capitalize;
+  -moz-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+}
+.contact__input-group input:-ms-input-placeholder, .contact__input-group textarea:-ms-input-placeholder {
+  font-weight: 500;
+  color: rgb(197, 196, 199);
+  font-weight: 400;
+  font-family: "Manrope", sans-serif;
+  text-transform: capitalize;
+  -ms-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+}
+.contact__input-group input::placeholder, .contact__input-group textarea::placeholder {
+  font-weight: 500;
+  color: rgb(197, 196, 199);
+  font-weight: 400;
+  font-family: "Manrope", sans-serif;
+  text-transform: capitalize;
+  transition: transform 0.2s ease;
 }
 .contact__input-group input:hover, .contact__input-group textarea:hover {
   outline: 1px solid rgb(255, 255, 255);
@@ -1809,7 +1812,7 @@ body#body.light .section-title h1 {
           animation: unset;
 }
 body#body.light .section-title p {
-  color: rgba(1, 14, 42, 0.694);
+  color: rgba(1, 14, 42, 0.771);
 }
 body#body.light .section-title p b {
   color: rgb(1, 14, 42);
@@ -1826,7 +1829,7 @@ body#body.light .nav__logo {
 }
 body#body.light .nav__list a {
   text-decoration: none;
-  color: rgba(1, 14, 42, 0.694);
+  color: rgba(1, 14, 42, 0.771);
 }
 body#body.light .nav__list a.active {
   color: rgb(1, 14, 42);
@@ -1847,7 +1850,7 @@ body#body.light .nav__mobile {
   background-color: rgb(255, 255, 255);
 }
 body#body.light .nav__mobile ul a {
-  color: rgba(1, 14, 42, 0.694);
+  color: rgba(1, 14, 42, 0.771);
 }
 body#body.light .nav__mobile a.active {
   color: rgb(1, 14, 42);
@@ -1878,7 +1881,7 @@ body#body.light .hero h1 {
           animation: gradient 3s linear infinite;
 }
 body#body.light .hero p {
-  color: rgba(1, 14, 42, 0.694);
+  color: rgba(1, 14, 42, 0.771);
 }
 body#body.light .hero a {
   border: 1px solid rgb(1, 14, 42);
@@ -1933,13 +1936,13 @@ body#body.light .featured-projects__sidebar-title h3 {
   color: rgb(1, 14, 42);
 }
 body#body.light .featured-projects__sidebar-title span {
-  color: rgba(1, 14, 42, 0.694);
+  color: rgba(1, 14, 42, 0.771);
 }
 body#body.light .featured-projects__sidebar-about h4, body#body.light .featured-projects__sidebar-tech h4 {
   color: rgb(1, 14, 42);
 }
 body#body.light .featured-projects__sidebar-about p {
-  color: rgba(1, 14, 42, 0.694);
+  color: rgba(1, 14, 42, 0.771);
   font-size: 1.8rem;
 }
 body#body.light .featured-projects__sidebar-tech ul li {
@@ -1972,7 +1975,7 @@ body#body.light .about__content p:first-child {
 }
 body#body.light .about__content p:nth-child(2), body#body.light .about__content p:last-child {
   font-weight: 500;
-  color: rgba(1, 14, 42, 0.694);
+  color: rgba(1, 14, 42, 0.771);
 }
 body#body.light .skills__container {
   border: 1px solid rgba(180, 180, 180, 0.926);
@@ -2004,7 +2007,7 @@ body#body.light .skills ul li:nth-child(2)::before {
   }
 }
 body#body.light .projects__nav button {
-  color: rgba(1, 14, 42, 0.694);
+  color: rgba(1, 14, 42, 0.771);
   font-weight: 500;
 }
 body#body.light .projects__nav button:focus-visible {
@@ -2052,13 +2055,13 @@ body#body.light .projects__sidebar-title h3 {
 }
 body#body.light .projects__sidebar-title span {
   font-weight: 500;
-  color: rgba(1, 14, 42, 0.694);
+  color: rgba(1, 14, 42, 0.771);
 }
 body#body.light .projects__sidebar-about h4, body#body.light .projects__sidebar-tech h4 {
   color: rgb(1, 14, 42);
 }
 body#body.light .projects__sidebar-about p {
-  color: rgba(1, 14, 42, 0.694);
+  color: rgba(1, 14, 42, 0.771);
   font-weight: 500;
 }
 body#body.light .projects__sidebar-tech ul li {
@@ -2078,17 +2081,18 @@ body#body.light .projects__sidebar-links a:focus-visible {
   outline: 2px dashed rgb(1, 14, 42);
 }
 body#body.light .contact__input-group input::-moz-placeholder, body#body.light .contact__input-group textarea::-moz-placeholder {
-  color: rgba(1, 14, 42, 0.694);
+  color: rgba(1, 14, 42, 0.771);
 }
 body#body.light .contact__input-group input:-ms-input-placeholder, body#body.light .contact__input-group textarea:-ms-input-placeholder {
-  color: rgba(1, 14, 42, 0.694);
+  color: rgba(1, 14, 42, 0.771);
 }
 body#body.light .contact__input-group input::placeholder, body#body.light .contact__input-group textarea::placeholder {
-  color: rgba(1, 14, 42, 0.694);
+  color: rgba(1, 14, 42, 0.771);
 }
 body#body.light .contact__input-group input, body#body.light .contact__input-group textarea {
-  border-color: rgba(1, 14, 42, 0.694);
+  border-color: rgba(1, 14, 42, 0.771);
   color: rgb(1, 14, 42);
+  background-color: rgb(255, 255, 255);
 }
 body#body.light .contact__input-group input:hover, body#body.light .contact__input-group textarea:hover {
   outline: 1px solid rgb(1, 14, 42);

@@ -406,6 +406,7 @@ body#body.light {
     &__input-group textarea {
       border-color: $color-dark-blue-secondary;
       color: $color-dark-blue;
+      background-color: $color-light;
     }
 
     &__input-group input:hover,
