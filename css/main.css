@@ -846,7 +846,7 @@ ul li.capitalize {
   z-index: 6;
   width: 50rem;
   height: 100vh;
-  right: -70%;
+  right: -100%;
   top: 0;
   bottom: 0;
   background-color: rgb(1, 14, 42);
@@ -1477,7 +1477,7 @@ ul li.capitalize {
   z-index: 6;
   width: 50rem;
   height: 100vh;
-  right: -70%;
+  right: -100%;
   top: 0;
   bottom: 0;
   background-color: rgb(1, 14, 42);
