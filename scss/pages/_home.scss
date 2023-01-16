@@ -199,15 +199,23 @@
   &__card:hover img,
   &__card:focus-visible img {
     transform: scale(1.03);
+
+    @include respond-to(lg) {
+      transform: scale(1);
+    }
+
+    @include respond-to(sm) {
+      transform: scale(1);
+    }
   }
 
   &__card img {
     @include respond-to(lg) {
-      transform: scale(1.03);
+      transform: scale(1);
     }
 
     @include respond-to(sm) {
-      transform: scale(1.03);
+      transform: scale(1);
     }
   }
 
@@ -342,6 +350,8 @@
     margin: 0;
     display: flex;
     list-style-type: none;
+    flex-wrap: wrap;
+    row-gap: 1.6rem;
   }
 
   &__card-info ul li {

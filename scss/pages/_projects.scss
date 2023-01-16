@@ -141,15 +141,23 @@
   &__card:hover img,
   &__card:focus-visible img {
     transform: scale(1.03);
+
+    @include respond-to(lg) {
+      transform: scale(1);
+    }
+
+    @include respond-to(sm) {
+      transform: scale(1);
+    }
   }
 
   &__card img {
     @include respond-to(lg) {
-      transform: scale(1.03);
+      transform: scale(1);
     }
 
     @include respond-to(sm) {
-      transform: scale(1.03);
+      transform: scale(1);
     }
   }
 
