@@ -1682,6 +1682,7 @@ ul li.capitalize {
   outline: 2px dotted transparent;
   transition: all 0.2s ease;
   outline-offset: 0;
+  color: rgb(255, 255, 255);
 }
 .contact a::after {
   position: absolute;
@@ -2104,6 +2105,9 @@ body#body.light .projects__sidebar-links a::after {
 }
 body#body.light .projects__sidebar-links a:focus-visible {
   outline: 2px dashed rgb(1, 14, 42);
+}
+body#body.light .contact a {
+  color: rgb(1, 14, 42);
 }
 body#body.light .contact a::after {
   background-color: rgb(1, 14, 42);

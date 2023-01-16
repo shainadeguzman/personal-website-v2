@@ -397,6 +397,10 @@ body#body.light {
   }
 
   .contact {
+    a {
+      color: $color-dark-blue;
+    }
+
     a::after {
       background-color: $color-dark-blue;
     }
