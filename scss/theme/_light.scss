@@ -397,6 +397,14 @@ body#body.light {
   }
 
   .contact {
+    a::after {
+      background-color: $color-dark-blue;
+    }
+
+    a:focus-visible {
+      outline-color: $color-dark-blue;
+    }
+
     &__input-group input::placeholder,
     &__input-group textarea::placeholder {
       color: $color-dark-blue-secondary;

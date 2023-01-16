@@ -1,6 +1,35 @@
 .contact {
   margin-top: 16rem;
 
+  a {
+    text-decoration: none;
+    position: relative;
+    outline: 2px dotted transparent;
+    transition: all 0.2s ease;
+    outline-offset: 0;
+  }
+
+  a::after {
+    position: absolute;
+    content: "";
+    background-color: $color-light;
+    bottom: -2px;
+    height: 1px;
+    width: 0%;
+    left: 0;
+    transform-origin: 0%;
+    transition: width 0.4s ease;
+  }
+
+  a:hover::after {
+    width: 100%;
+  }
+
+  a:focus-visible {
+    outline: 2px dashed $color-light;
+    outline-offset: 2px;
+  }
+
   &__form {
     width: 60rem;
 
