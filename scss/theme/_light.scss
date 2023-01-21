@@ -178,6 +178,10 @@ body#body.light {
       background-color: $color-light;
     }
 
+    &__sidebar-about a {
+      color: $color-dark-blue;
+    }
+
     &__sidebar-btn {
       border-bottom: 1px solid $color-light-border-secondary;
     }
@@ -229,7 +233,8 @@ body#body.light {
       background-color: $color-dark-blue;
     }
 
-    &__sidebar-links a:focus-visible {
+    &__sidebar-links a:focus-visible,
+    &__sidebar-about a:focus-visible {
       outline: 2px dashed $color-dark-blue;
     }
   }
@@ -337,6 +342,10 @@ body#body.light {
       background-color: $color-light;
     }
 
+    &__sidebar-about a {
+      color: $color-dark-blue;
+    }
+
     &__sidebar-btn {
       border-bottom: 1px solid $color-light-border-secondary;
     }
@@ -391,7 +400,8 @@ body#body.light {
       background-color: $color-dark-blue;
     }
 
-    &__sidebar-links a:focus-visible {
+    &__sidebar-links a:focus-visible,
+    &__sidebar-about a:focus-visible {
       outline: 2px dashed $color-dark-blue;
     }
   }

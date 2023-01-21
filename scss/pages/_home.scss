@@ -508,6 +508,12 @@
     font-weight: 500;
   }
 
+  &__sidebar-about a {
+    color: $color-light;
+    font-weight: 500;
+    transition: outline-offset 0.2s ease;
+  }
+
   &__sidebar-tech ul {
     margin: 0;
     padding: 0;
@@ -605,7 +611,8 @@
     width: 100%;
   }
 
-  &__sidebar-links a:focus-visible {
+  &__sidebar-links a:focus-visible,
+  &__sidebar-about a:focus-visible {
     outline: 2px dashed $color-light;
     outline-offset: 5px;
   }

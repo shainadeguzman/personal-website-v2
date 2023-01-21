@@ -440,6 +440,12 @@
     text-transform: capitalize;
   }
 
+  &__sidebar-about a {
+    color: $color-light;
+    font-weight: 500;
+    transition: outline-offset 0.2s ease;
+  }
+
   &__sidebar-tech h4 {
     margin-bottom: 1.2rem;
   }
@@ -545,7 +551,8 @@
     width: 100%;
   }
 
-  &__sidebar-links a:focus-visible {
+  &__sidebar-links a:focus-visible,
+  &__sidebar-about a:focus-visible {
     outline: 2px dashed $color-light;
     outline-offset: 5px;
   }

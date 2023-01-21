@@ -960,6 +960,11 @@ ul li.capitalize {
   font-size: 1.8rem;
   font-weight: 500;
 }
+.featured-projects__sidebar-about a {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  transition: outline-offset 0.2s ease;
+}
 .featured-projects__sidebar-tech ul {
   margin: 0;
   padding: 0;
@@ -1050,7 +1055,7 @@ ul li.capitalize {
 .featured-projects__sidebar-links a:hover::after, .featured-projects__sidebar-links a:focus-visible::after {
   width: 100%;
 }
-.featured-projects__sidebar-links a:focus-visible {
+.featured-projects__sidebar-links a:focus-visible, .featured-projects__sidebar-about a:focus-visible {
   outline: 2px dashed rgb(255, 255, 255);
   outline-offset: 5px;
 }
@@ -1592,6 +1597,11 @@ ul li.capitalize {
   font-weight: 600;
   text-transform: capitalize;
 }
+.projects__sidebar-about a {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  transition: outline-offset 0.2s ease;
+}
 .projects__sidebar-tech h4 {
   margin-bottom: 1.2rem;
 }
@@ -1688,7 +1698,7 @@ ul li.capitalize {
 .projects__sidebar-links a:hover::after, .projects__sidebar-links a:focus-visible::after {
   width: 100%;
 }
-.projects__sidebar-links a:focus-visible {
+.projects__sidebar-links a:focus-visible, .projects__sidebar-about a:focus-visible {
   outline: 2px dashed rgb(255, 255, 255);
   outline-offset: 5px;
 }
@@ -1966,6 +1976,9 @@ body#body.light .featured-projects__card > div {
 body#body.light .featured-projects__sidebar {
   background-color: rgb(255, 255, 255);
 }
+body#body.light .featured-projects__sidebar-about a {
+  color: rgb(1, 14, 42);
+}
 body#body.light .featured-projects__sidebar-btn {
   border-bottom: 1px solid rgba(180, 180, 180, 0.926);
 }
@@ -2004,7 +2017,7 @@ body#body.light .featured-projects__sidebar-links a span {
 body#body.light .featured-projects__sidebar-links a::after {
   background-color: rgb(1, 14, 42);
 }
-body#body.light .featured-projects__sidebar-links a:focus-visible {
+body#body.light .featured-projects__sidebar-links a:focus-visible, body#body.light .featured-projects__sidebar-about a:focus-visible {
   outline: 2px dashed rgb(1, 14, 42);
 }
 body#body.light .scroll-top-btn {
@@ -2082,6 +2095,9 @@ body#body.light .projects__card > div {
 body#body.light .projects__sidebar {
   background-color: rgb(255, 255, 255);
 }
+body#body.light .projects__sidebar-about a {
+  color: rgb(1, 14, 42);
+}
 body#body.light .projects__sidebar-btn {
   border-bottom: 1px solid rgba(180, 180, 180, 0.926);
 }
@@ -2123,7 +2139,7 @@ body#body.light .projects__sidebar-links a span {
 body#body.light .projects__sidebar-links a::after {
   background-color: rgb(1, 14, 42);
 }
-body#body.light .projects__sidebar-links a:focus-visible {
+body#body.light .projects__sidebar-links a:focus-visible, body#body.light .projects__sidebar-about a:focus-visible {
   outline: 2px dashed rgb(1, 14, 42);
 }
 body#body.light .contact a {
