@@ -48,14 +48,6 @@
     position: relative;
   }
 
-  &__list a::before {
-    margin-right: 0.4rem;
-    font-size: 1.6rem;
-    font-weight: 600;
-    counter-increment: item;
-    content: "0" counter(item) ". ";
-  }
-
   &__list a.active {
     color: $color-light;
     font-weight: 700;

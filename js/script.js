@@ -10,22 +10,7 @@ const mobileNav = document.querySelector(".nav__mobile");
 const mobileNavItems = document.querySelectorAll(".nav__mobile-items");
 const mobileNavOverlay = document.querySelector(".nav__mobile-overlay");
 const tabIndexElements = document.querySelectorAll(".tabIndxs");
-const toggleThemeBtn = document.getElementById("toggle-theme");
-const toggleThememMobileBtn = document.getElementById("toggle-theme-mobile");
 const formInputs = document.querySelectorAll(".input");
-
-if (!localStorage.getItem("theme")) {
-  localStorage.setItem("theme", "dark");
-  document.getElementById("body").classList = "dark";
-} else {
-  if (localStorage.getItem("theme") === "dark") {
-    document.getElementById("body").classList = "dark";
-  } else {
-    document.getElementById("body").classList = "light";
-    toggleThemeBtn.classList.add("active");
-    toggleThememMobileBtn.classList.add("active");
-  }
-}
 
 // FUNCTIONS
 const addIndexFocus = function () {
@@ -35,25 +20,6 @@ const addIndexFocus = function () {
 const removeIndexFocus = function () {
   tabIndexElements.forEach((tabEl) => (tabEl.tabIndex = -1));
 };
-
-const toggleTheme = function () {
-  if (document.getElementById("body").classList.contains("light")) {
-    document.getElementById("body").classList = "dark";
-    localStorage.setItem("theme", "dark");
-    toggleThemeBtn.classList.remove("active");
-    toggleThememMobileBtn.classList.remove("active");
-    navBar.style.background = "rgba(1, 14, 42, 1)";
-  } else if (document.getElementById("body").classList.contains("dark")) {
-    document.getElementById("body").classList = "light";
-    localStorage.setItem("theme", "light");
-    toggleThemeBtn.classList.add("active");
-    toggleThememMobileBtn.classList.add("active");
-    navBar.style.background = "rgba(255, 255, 255, 1)";
-  }
-};
-
-toggleThemeBtn.addEventListener("click", toggleTheme);
-toggleThememMobileBtn.addEventListener("click", toggleTheme);
 
 // MOBILE NAVIGATION
 mobileNavBtn.addEventListener("click", function () {
